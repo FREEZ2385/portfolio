@@ -1,0 +1,26 @@
+.nav-bar {
+    background-color: #555555;
+    width: 20vw;
+    height: 90vh;
+    top: 5vh;
+    left: -18.5vw;
+    position: fixed;
+    z-index: 2000;
+    margin: 2vh, 0;
+    display: flex;
+    border-radius: 30px;
+    .nav-bar-open-button {
+        background-color: #777777;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-bar-area {
+        color: white;
+        padding: 2vmax;
+        .nav-bar-title {
+            font-size: 2vmax;
+        }
+    }
+}
