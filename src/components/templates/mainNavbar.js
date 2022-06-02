@@ -9,8 +9,8 @@ function MainNavbar() {
   const handleClose = () => {
     gsap.fromTo(
       ".nav-bar",
-      { x: 0, duration: 0.5 },
-      { x: "19vw", duration: 0.8 }
+      { x: 0, duration: 0.2 },
+      { x: "19vw", duration: 1.0, ease: "elastic.out(0.8, 0.5)" }
     );
     setIsOpen(true);
   };
@@ -18,19 +18,18 @@ function MainNavbar() {
   const handleOpen = () => {
     gsap.fromTo(
       ".nav-bar",
-      { x: "20vw", duration: 0.5 },
-      { x: 0, duration: 0.8 }
+      { x: "19vw", duration: 0.2 },
+      { x: 0, duration: 0.6 }
     );
     setIsOpen(false);
-    setTimeout(() => handleClose(), 5000);
   };
 
   useEffect(() => {
     if (isOpen)
       gsap.fromTo(
         ".nav-bar-menu",
-        { y: "5vh", duration: 0.5, opacity: 0, ease: "power4.out" },
-        { y: 0, duration: 1.5, opacity: 1, ease: "power4.out" }
+        { y: "5vh", duration: 0, opacity: 0, ease: "power4.out" },
+        { y: 0, duration: 0.5, opacity: 1, ease: "power4.out" }
       );
   });
   return (
@@ -46,7 +45,6 @@ function MainNavbar() {
       <div
         className="nav-bar-open-button"
         onClick={() => {
-          console.log(isOpen);
           if (isOpen) {
             handleOpen();
           } else {
