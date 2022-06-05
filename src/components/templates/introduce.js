@@ -8,7 +8,10 @@ function Introduce() {
       <div className="introduce-contents">
         <div className="introduce-title">Freez`s Laziness</div>
         <div className="introduce-subtitle">
-          <span className="introduce-subtitle-category"></span>
+          <span
+            id="introduce-category"
+            className="introduce-subtitle-category"
+          ></span>
           <span className="introduce-subtitle-developer">Developer</span>
         </div>
       </div>
