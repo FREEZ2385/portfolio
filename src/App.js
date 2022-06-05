@@ -7,8 +7,10 @@ import Introduce from "./components/templates/introduce";
 import MainNavbar from "./components/templates/mainNavbar";
 import PageAnimation from "./animations";
 import ScrollIcon from "./components/atoms/scrollIcon";
+import TextPlugin from "gsap/TextPlugin";
 
 function App() {
+  gsap.registerPlugin(TextPlugin);
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {

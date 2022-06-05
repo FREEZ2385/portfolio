@@ -1,0 +1,10 @@
+.about-me-area {
+    display: grid;
+    height: 100%;
+    padding: 40px;
+    .about-me-area-content {
+        height: 33%;
+        width: 100%;
+        text-align: left;
+    }
+}

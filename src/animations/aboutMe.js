@@ -12,12 +12,15 @@ export default function AboutMeAnimation() {
       id: "aaaaa",
     },
   });
-  IntroduceTimeLine.from(".about-me-title", { x: "-15vw", autoAlpha: 0 }).to(
-    ".about-me-title",
-    {
+  IntroduceTimeLine.to(".about-me", {
+    backgroundColor: "#666666",
+    duration: 2,
+    overwrite: true,
+  })
+    .from(".about-me-title", { x: "-15vw", autoAlpha: 0 })
+    .to(".about-me-title", {
       x: "0",
       autoAlpha: 1,
       duration: 2,
-    }
-  );
+    });
 }

@@ -1,4 +1,4 @@
-.introduce { 
+.introduce {
     background-color: black;
     width: 100vw;
     height: 100vh;
@@ -8,9 +8,22 @@
     align-items: center;
     justify-content: right;
     display: flex;
-    .introduce-contents{
+    .introduce-contents {
         padding: 5%;
         text-align: right;
-        font-size: 60px;
+        .introduce-title {
+            font-size: 100px;
+        }
+        .introduce-subtitle {
+            display: flex;
+            font-size: 60px;
+            .introduce-subtitle-category {
+                color: #00ff00;
+                width: 30vw;
+            }
+            .introduce-subtitle-developer {
+                margin-left: 1.5vw;
+            }
+        }
     }
 }
