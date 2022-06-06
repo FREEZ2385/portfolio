@@ -1,21 +1,21 @@
 import React from "react";
 import "./scss/aboutMeArea.scss";
+import aboutMeData from "../../json/aboutMe.json";
 
 function AboutMeArea() {
   return (
     <div className="about-me-area">
-      <div className="about-me-area-content">
-        <h1>Name</h1>
-        <h2>Lee Sangcheol</h2>
-      </div>
-      <div className="about-me-area-content">
-        <h1>Birth</h1>
-        <h2>1993.01.25</h2>
-      </div>
-      <div className="about-me-area-content">
-        <h1>Region</h1>
-        <h2>Republic of Korea</h2>
-      </div>
+      {aboutMeData.map((object) => (
+        <div
+          key={object.code}
+          id={`about-me-${object.code}`}
+          className="about-me-area-content"
+          style={{ height: `calc(${100 / aboutMeData.length}% - 20px)` }}
+        >
+          <h1>{object.title}</h1>
+          <h2>{object.content}</h2>
+        </div>
+      ))}
     </div>
   );
 }

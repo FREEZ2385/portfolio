@@ -1,10 +1,14 @@
 .about-me-area {
-    display: grid;
     height: 100%;
-    padding: 40px;
+    padding: 25px;
     .about-me-area-content {
-        height: 33%;
         width: 100%;
         text-align: left;
+        h1 {
+            font-size: 32px;
+        }
+        h2 {
+            font-size: 24px;
+        }
     }
 }

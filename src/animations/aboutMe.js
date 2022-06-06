@@ -1,26 +1,29 @@
 import gsap from "gsap";
+import aboutMeData from "../json/aboutMe.json";
 
 export default function AboutMeAnimation() {
   var IntroduceTimeLine = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-me",
-      scrub: true,
-      pin: ".about-me",
-      start: "top top",
-      end: "bottom+=100% top+=100%",
-      pinSpacing: true,
+      // start: "top top",
+      // end: "bottom+=100% top+=100%",
       id: "aaaaa",
     },
   });
   IntroduceTimeLine.to(".about-me", {
     backgroundColor: "#666666",
-    duration: 2,
+    duration: 0.4,
     overwrite: true,
-  })
-    .from(".about-me-title", { x: "-15vw", autoAlpha: 0 })
-    .to(".about-me-title", {
-      x: "0",
-      autoAlpha: 1,
-      duration: 2,
-    });
+  });
+  aboutMeData.map((object) =>
+    IntroduceTimeLine.fromTo(
+      `#about-me-${object.code}`,
+      { x: "-15vw", autoAlpha: 0 },
+      {
+        x: "0",
+        autoAlpha: 1,
+        duration: 0.3,
+      }
+    )
+  );
 }

@@ -7,6 +7,7 @@ function AboutMe() {
   return (
     <div className="about-me">
       <div className="about-me-contents">
+        {/* TODO: Trello에 있는 레이아웃 구성 참고 */}
         <AboutMeArea />
       </div>
     </div>
