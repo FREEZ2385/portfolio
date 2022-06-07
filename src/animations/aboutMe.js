@@ -5,24 +5,37 @@ export default function AboutMeAnimation() {
   var IntroduceTimeLine = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-me",
-      // start: "top top",
-      // end: "bottom+=100% top+=100%",
+      scrub: true,
+      start: "top-=90% top",
+      end: "bottom-=50% top",
+      pinSpacing: true,
       id: "aaaaa",
     },
   });
-  IntroduceTimeLine.to(".about-me", {
-    backgroundColor: "#666666",
-    duration: 0.4,
-    overwrite: true,
+  IntroduceTimeLine.from("#about-me-centerline", {
+    height: "0vh",
+    duration: 0,
+  });
+  IntroduceTimeLine.to("#about-me-centerline", {
+    height: "100vh",
+    duration: 2,
   });
   aboutMeData.map((object) =>
-    IntroduceTimeLine.fromTo(
-      `#about-me-${object.code}`,
-      { x: "-15vw", autoAlpha: 0 },
+    gsap.fromTo(
+      `#about-me-content-${object.code}`,
       {
-        x: "0",
+        autoAlpha: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: `#about-me-content-${object.code}`,
+          markers: true,
+          start: "top+=600% bottom-=30%",
+          end: "bottom+=600% bottom",
+          scrub: true,
+        },
         autoAlpha: 1,
-        duration: 0.3,
+        duration: 1,
       }
     )
   );
