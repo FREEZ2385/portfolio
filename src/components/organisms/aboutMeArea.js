@@ -1,23 +1,24 @@
 import React from "react";
 import "./scss/aboutMeArea.scss";
-import aboutMeData from "../../json/aboutMe.json";
+import PropTypes from "prop-types";
 
-function AboutMeArea() {
+function AboutMeArea(props) {
+  const { aboutMeData } = props;
+
   return (
     <div className="about-me-area">
-      {aboutMeData.map((object) => (
-        <div
-          key={object.code}
-          id={`about-me-${object.code}`}
-          className="about-me-area-content"
-          style={{ height: `calc(${100 / aboutMeData.length}% - 20px)` }}
-        >
-          <h1>{object.title}</h1>
-          <h2>{object.content}</h2>
-        </div>
-      ))}
+      <h1>{aboutMeData.title}</h1>
+      <h2>{aboutMeData.content}</h2>
     </div>
   );
 }
+
+AboutMeArea.propTypes = {
+  aboutMeData: PropTypes.shape({
+    code: PropTypes.string,
+    title: PropTypes.string,
+    content: PropTypes.string,
+  }),
+};
 
 export default AboutMeArea;

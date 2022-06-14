@@ -3,12 +3,14 @@ import React from "react";
 // import AboutMeArea from "../organisms/aboutMeArea";
 import "./scss/aboutMe.scss";
 import aboutMeData from "../../json/aboutMe.json";
+import AboutMeArea from "../organisms/aboutMeArea";
 
 function AboutMe() {
   return (
     <div
       className="about-me"
-      style={{ height: `${(aboutMeData.length + 1) * 30}vh` }}
+      // style={{ height: `${(aboutMeData.length + 1) * 20}vh` }}
+      style={{ height: `100vh` }}
     >
       <div id="about-me-centerline"></div>
       {aboutMeData.map((object, index) => (
@@ -20,9 +22,13 @@ function AboutMe() {
               ? "about-me-left-contents"
               : "about-me-right-contents"
           }
-          style={{ top: `${index * 10 - 86}vh` }}
+          style={{
+            top:
+              index % 2 === 0 ? `${index * 10 - 88}vh` : `${index * 10 - 78}vh`,
+          }}
         >
-          {object.title}
+          <AboutMeArea aboutMeData={object} />
+          {/* {object.title} */}
         </div>
       ))}
     </div>

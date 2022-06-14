@@ -20,21 +20,21 @@ export default function AboutMeAnimation() {
     height: "100vh",
     duration: 2,
   });
-  aboutMeData.map((object) =>
+  aboutMeData.map((object, index) =>
     gsap.fromTo(
       `#about-me-content-${object.code}`,
       {
         autoAlpha: 0,
+        x: index % 2 === 0 ? "-50vw" : "50vw",
       },
       {
         scrollTrigger: {
-          trigger: `#about-me-content-${object.code}`,
+          trigger: `.about-me`,
           markers: true,
-          start: "top+=600% bottom-=30%",
-          end: "bottom+=600% bottom",
-          scrub: true,
+          start: "top top+=10%",
         },
         autoAlpha: 1,
+        x: "0vw",
         duration: 1,
       }
     )
