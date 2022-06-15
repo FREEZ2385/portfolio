@@ -8,6 +8,7 @@ import MainNavbar from "./components/templates/mainNavbar";
 import PageAnimation from "./animations";
 import ScrollIcon from "./components/atoms/scrollIcon";
 import TextPlugin from "gsap/TextPlugin";
+import Skill from "./components/templates/skill";
 
 function App() {
   gsap.registerPlugin(TextPlugin);
@@ -24,6 +25,7 @@ function App() {
       <div className="area">
         <Introduce />
         <AboutMe />
+        <Skill />
       </div>
     </div>
   );

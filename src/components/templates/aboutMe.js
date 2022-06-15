@@ -24,7 +24,9 @@ function AboutMe() {
           }
           style={{
             top:
-              index % 2 === 0 ? `${index * 10 - 88}vh` : `${index * 10 - 78}vh`,
+              index % 2 === 0
+                ? `${index * 10 - 100}vh`
+                : `${index * 10 - 90}vh`,
           }}
         >
           <AboutMeArea aboutMeData={object} />

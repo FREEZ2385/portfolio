@@ -5,10 +5,8 @@ export default function AboutMeAnimation() {
   var IntroduceTimeLine = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-me",
-      scrub: true,
       start: "top-=90% top",
       end: "bottom-=50% top",
-      pinSpacing: true,
       id: "aaaaa",
     },
   });
@@ -18,7 +16,7 @@ export default function AboutMeAnimation() {
   });
   IntroduceTimeLine.to("#about-me-centerline", {
     height: "100vh",
-    duration: 2,
+    duration: 0.3,
   });
   aboutMeData.map((object, index) =>
     gsap.fromTo(
@@ -31,7 +29,9 @@ export default function AboutMeAnimation() {
         scrollTrigger: {
           trigger: `.about-me`,
           markers: true,
-          start: "top top+=10%",
+          end: "bottom-=20%",
+          pin: true,
+          scrub: true,
         },
         autoAlpha: 1,
         x: "0vw",
