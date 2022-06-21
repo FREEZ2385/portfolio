@@ -9,11 +9,11 @@ import PageAnimation from "./animations";
 import ScrollIcon from "./components/atoms/scrollIcon";
 import TextPlugin from "gsap/TextPlugin";
 import Skill from "./components/templates/skill";
+import ReactFullpage from "@fullpage/react-fullpage";
 
 function App() {
   gsap.registerPlugin(TextPlugin);
   gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
     PageAnimation();
   });
@@ -22,11 +22,26 @@ function App() {
     <div className="App">
       <MainNavbar />
       <ScrollIcon />
-      <div className="area">
-        <Introduce />
-        <AboutMe />
-        <Skill />
-      </div>
+      <ReactFullpage
+        navigation
+        scrollBar
+        scrollOverflow={false}
+        render={() => {
+          return (
+            <div className="area">
+              <div className="section">
+                <Introduce />
+              </div>
+              <div className="section">
+                <AboutMe />
+              </div>
+              <div className="section">
+                <Skill />
+              </div>
+            </div>
+          );
+        }}
+      />
     </div>
   );
 }

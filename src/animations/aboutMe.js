@@ -30,8 +30,6 @@ export default function AboutMeAnimation() {
           trigger: `.about-me`,
           markers: true,
           end: "bottom-=20%",
-          pin: true,
-          scrub: true,
         },
         autoAlpha: 1,
         x: "0vw",

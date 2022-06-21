@@ -6,7 +6,7 @@ import "./scss/aboutMe.scss";
 function Skill() {
   return (
     <div
-      className="skill"
+      className="panel skill"
       // style={{ height: `${(aboutMeData.length + 1) * 20}vh` }}
       style={{ height: `100vh` }}
     >
