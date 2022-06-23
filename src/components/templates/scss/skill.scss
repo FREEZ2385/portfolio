@@ -1,0 +1,19 @@
+.skill {
+    background-color: rgb(93, 77, 77);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    padding: 10vmax;
+    .skill-area {
+        background-color: white;
+        width: 80vw;
+        height: 70vh;
+        border-radius: 30px;
+        padding: 2vmin;
+    }
+    circle {
+        fill: none;
+        stroke-width: 100;
+    }
+}

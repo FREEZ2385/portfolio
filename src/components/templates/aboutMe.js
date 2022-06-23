@@ -1,6 +1,6 @@
 // import gsap from "gsap";
 import React from "react";
-// import AboutMeArea from "../organisms/aboutMeArea";
+
 import "./scss/aboutMe.scss";
 import aboutMeData from "../../json/aboutMe.json";
 import AboutMeArea from "../organisms/aboutMeArea";
@@ -30,7 +30,6 @@ function AboutMe() {
           }}
         >
           <AboutMeArea aboutMeData={object} />
-          {/* {object.title} */}
         </div>
       ))}
     </section>

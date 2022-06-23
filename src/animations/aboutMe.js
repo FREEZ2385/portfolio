@@ -28,7 +28,6 @@ export default function AboutMeAnimation() {
       {
         scrollTrigger: {
           trigger: `.about-me`,
-          markers: true,
           end: "bottom-=20%",
         },
         autoAlpha: 1,
