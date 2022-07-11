@@ -6,24 +6,34 @@ import {
 import PropTypes from "prop-types";
 import "react-circular-progressbar/dist/styles.css";
 
-// If you don't have a version of React that supports
-// hooks, you can use a class-based version of this
-// component in ProgressProviderUsingClass.js
 function CircularChart(props) {
   const { value, text } = props;
   const [inValue, setInValue] = useState(0);
-  const [isAnimated, setIsAnimated] = useState(false);
-  useEffect(() => {
+
+  const onStartFunction = () => {
     setInValue(value);
-    setIsAnimated(!isAnimated);
-  }, [value]);
+  };
 
   useEffect(() => {
-    window.clearInterval(1000);
+    // skillTimeLine.from(`.${text}`, {
+    //   width: 0,
+    //   height: 0,
+    //   autoAlpha: 0,
+    // });
+    // skillTimeLine.to(`.${text}`, {
+    //   width: 200,
+    //   height: 200,
+    //   ease: "elastic.out(1.3, 1)",
+    //   autoAlpha: 1,
+    //   duration: 0.5,
+    //   onComplete: () => {
+    //     onStartFunction();
+    //   },
+    // });
+    onStartFunction();
   }, []);
-
   return (
-    <div id="progress" style={{ width: 200, height: 200 }}>
+    <div className={`${text}`} style={{ width: 200, height: 200 }}>
       <CircularProgressbarWithChildren
         initialAnimation={true}
         styles={buildStyles({
@@ -45,6 +55,7 @@ function CircularChart(props) {
 CircularChart.propTypes = {
   value: PropTypes.int,
   text: PropTypes.string,
+  // skillTimeLine: PropTypes.any.isRequired,
 };
 
 CircularChart.defaultProps = {

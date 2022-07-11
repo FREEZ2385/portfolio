@@ -7,7 +7,6 @@ export default function AboutMeAnimation() {
       trigger: ".about-me",
       start: "top-=90% top",
       end: "bottom-=50% top",
-      id: "aaaaa",
     },
   });
   IntroduceTimeLine.from("#about-me-centerline", {
