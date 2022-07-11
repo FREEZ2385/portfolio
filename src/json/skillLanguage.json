@@ -1,0 +1,26 @@
+[
+    {
+        "code": "c",
+        "title": "C Language",
+        "value": 90,
+        "icon": ""
+    },
+    {
+        "code": "javascript",
+        "title": "Javascript",
+        "value": 90,
+        "icon": ""
+    },
+    {
+        "code": "python",
+        "title": "Python",
+        "value": 90,
+        "icon": ""
+    },
+    {
+        "code": "dart",
+        "title": "Dart",
+        "value": 90,
+        "icon": ""
+    }
+]

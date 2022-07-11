@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import "react-circular-progressbar/dist/styles.css";
 
 function CircularChart(props) {
-  const { value, text } = props;
+  const { value, text, color } = props;
   const [inValue, setInValue] = useState(0);
 
   const onStartFunction = () => {
@@ -38,10 +38,9 @@ function CircularChart(props) {
         initialAnimation={true}
         styles={buildStyles({
           // Colors
-          pathColor: `rgba(62, 152, 199, ${66 / 100})`,
+          pathColor: `${color}`,
           textColor: "#f88",
           trailColor: "#d6d6d6",
-          backgroundColor: "#3e98c7",
         })}
         value={inValue}
       >
@@ -55,12 +54,14 @@ function CircularChart(props) {
 CircularChart.propTypes = {
   value: PropTypes.int,
   text: PropTypes.string,
+  color: PropTypes.string,
   // skillTimeLine: PropTypes.any.isRequired,
 };
 
 CircularChart.defaultProps = {
   title: 0,
   text: "",
+  color: "",
 };
 
 export default CircularChart;

@@ -1,0 +1,14 @@
+[
+    {
+        "code": "react",
+        "title": "React",
+        "value": 90,
+        "icon": ""
+    },
+    {
+        "code": "django",
+        "title": "Django",
+        "value": 90,
+        "icon": ""
+    }
+]

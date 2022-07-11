@@ -1,0 +1,14 @@
+[
+    {
+        "code": "aws",
+        "title": "AWS",
+        "value": 90,
+        "icon": ""
+    },
+    {
+        "code": "microsoftazure",
+        "title": "Microsoft Azure",
+        "value": 90,
+        "icon": ""
+    }
+]
