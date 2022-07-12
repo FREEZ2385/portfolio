@@ -30,7 +30,6 @@ function App() {
       ScrollTrigger.create({
         trigger: panel,
         end: "bottom top+=1",
-        markers: 1,
         onEnter: () => goToPanel(panel),
         onEnterBack: () => goToPanel(panel),
       });
