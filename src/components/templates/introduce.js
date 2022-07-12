@@ -4,7 +4,7 @@ import "./scss/introduce.scss";
 
 function Introduce() {
   return (
-    <section className="panel introduce">
+    <section className="introduce">
       <div className="introduce-contents">
         <div className="introduce-title">Freez`s Laziness</div>
         <div className="introduce-subtitle">

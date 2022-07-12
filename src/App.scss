@@ -5,13 +5,20 @@
 
 .area {
   // overflow: hidden;
-  width: 100vw;
   height: 100vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.panel {
+  display: block;
+}
+
+h1 {
+  margin: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {

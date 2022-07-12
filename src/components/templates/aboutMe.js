@@ -8,7 +8,7 @@ import AboutMeArea from "../organisms/aboutMeArea";
 function AboutMe() {
   return (
     <section
-      className="panel about-me"
+      className="about-me"
       // style={{ height: `${(aboutMeData.length + 1) * 20}vh` }}
       style={{ height: `100vh` }}
     >

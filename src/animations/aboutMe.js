@@ -5,7 +5,7 @@ export default function AboutMeAnimation() {
   var IntroduceTimeLine = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-me",
-      start: "top-=90% top",
+      start: "top-=100% top",
       end: "bottom-=50% top",
     },
   });

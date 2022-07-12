@@ -6,7 +6,7 @@ import "./scss/project.scss";
 
 function Project() {
   return (
-    <section className="panel project">
+    <section className="project">
       <div className="project-area">
         <h1>Project</h1>
 
