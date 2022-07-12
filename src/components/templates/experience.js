@@ -12,7 +12,7 @@ function Experience() {
 
         <ExperienceContent
           experienceContentData={{
-            code: "aaaaa",
+            code: "aaaaaa",
             companyName: "human resocia",
             date: "2019.04 - 2022.12",
             content: "test of experience content",
