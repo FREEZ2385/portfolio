@@ -11,6 +11,7 @@ import TextPlugin from "gsap/TextPlugin";
 import Skill from "./components/templates/skill";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Experience from "./components/templates/experience";
+import Project from "./components/templates/project";
 
 function App() {
   gsap.registerPlugin(TextPlugin);
@@ -41,6 +42,9 @@ function App() {
               </div>
               <div className="section">
                 <Experience />
+              </div>
+              <div className="section">
+                <Project />
               </div>
             </div>
           );
