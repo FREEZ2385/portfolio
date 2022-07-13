@@ -1,6 +1,7 @@
 // import gsap from "gsap";
 import React from "react";
-import ExperienceContent from "../organisms/experienceContent";
+import projectData from "../../json/project.json";
+import ProjectContent from "../organisms/projectContent";
 
 import "./scss/project.scss";
 
@@ -9,15 +10,9 @@ function Project() {
     <section className="project">
       <div className="project-area">
         <h1>Project</h1>
-
-        <ExperienceContent
-          experienceContentData={{
-            code: "aaaaaa",
-            companyName: "human resocia",
-            date: "2019.04 - 2022.12",
-            content: "test of experience content",
-          }}
-        />
+        {projectData.map((obj) => (
+          <ProjectContent key={obj.id} projectContentData={obj} />
+        ))}
       </div>
     </section>
   );
