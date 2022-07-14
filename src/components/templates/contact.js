@@ -52,9 +52,12 @@ function Contact() {
       </div>
       <div className="contact-area">
         <IconButton
+          aria-describedby="email"
           size="small"
           onClick={() => {
-            openInNewTab("mailto:schlee9703@gmail.com");
+            navigator.clipboard.writeText("schlee9703@gmail.com").then(() => {
+              alert("Email Address Copied!");
+            });
           }}
         >
           <EmailIcon className="contact-icon" style={{ color: "#FFFFFF" }} />
