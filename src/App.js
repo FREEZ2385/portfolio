@@ -13,6 +13,7 @@ import Skill from "./components/templates/skill";
 import Experience from "./components/templates/experience";
 import Project from "./components/templates/project";
 import Footer from "./components/templates/footer";
+import Contact from "./components/templates/contact";
 
 function goToPanel(panel) {
   gsap.to(window, {
@@ -43,6 +44,7 @@ function App() {
   return (
     <div className="App">
       <MainNavbar />
+      <Contact />
       <ScrollIcon />
 
       <div className="area">
