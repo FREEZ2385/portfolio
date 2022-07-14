@@ -1,45 +1,63 @@
-// import gsap from "gsap";
 import { Grid } from "@mui/material";
 import React from "react";
 import CircularChart from "../atoms/circularChart";
-// import AboutMeArea from "../organisms/aboutMeArea";
 import skillFrameworkData from "../../json/skillFramework.json";
 import skillCloudData from "../../json/skillCloud.json";
 import skillLanguageData from "../../json/skillLanguage.json";
 import "./scss/skill.scss";
+// image List
+import awsIcon from "../../images/skill/aws.svg";
+import azureIcon from "../../images/skill/azure.svg";
+import dartIcon from "../../images/skill/dart.svg";
+import djangoIcon from "../../images/skill/django.svg";
+import flutterIcon from "../../images/skill/flutter.svg";
+import javascriptIcon from "../../images/skill/javascript.svg";
+import pythonIcon from "../../images/skill/python.svg";
+import reactIcon from "../../images/skill/react.svg";
+import pandasIcon from "../../images/skill/pandas.svg";
+
+const iconObj = {
+  aws: awsIcon,
+  azure: azureIcon,
+  dart: dartIcon,
+  django: djangoIcon,
+  flutter: flutterIcon,
+  javascript: javascriptIcon,
+  pandas: pandasIcon,
+  python: pythonIcon,
+  react: reactIcon,
+};
 
 function Skill() {
-  // const skillTimeLine = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".skill-area",
-  //     id: "skill",
-  //   },
-  // });
-
   return (
     <section className="skill">
       <div className="skill-area">
         <h1>Skill</h1>
-        <Grid container spacing={1}>
+        <Grid container spacing={1} justifyContent="center">
           <Grid item xs={4}>
             <h1>Language</h1>
-            <Grid container spacing={1}>
+            <Grid container spacing={1} justifyContent="center">
               {skillLanguageData.map((obj) => (
-                <Grid key={obj.code} item xs={6}>
-                  <CircularChart value={obj.value} text={obj.title} />
+                <Grid key={obj.code} item xs={6} align="center">
+                  <CircularChart
+                    value={obj.value}
+                    text={obj.title}
+                    icon={iconObj[obj.code]}
+                  />
                 </Grid>
               ))}
             </Grid>
           </Grid>
           <Grid item xs={4}>
             <h1>Framework</h1>
-            <Grid container spacing={1}>
+            <Grid container spacing={1} justifyContent="center">
               {skillFrameworkData.map((obj) => (
-                <Grid key={obj.code} item xs={6}>
+                <Grid key={obj.code} item xs={6} align="center">
                   <CircularChart
                     value={obj.value}
                     text={obj.title}
                     color="#000000"
+                    icon={iconObj[obj.code]}
                   />
                 </Grid>
               ))}
@@ -47,13 +65,14 @@ function Skill() {
           </Grid>
           <Grid item xs={4}>
             <h1>Cloud</h1>
-            <Grid container spacing={1}>
+            <Grid container spacing={1} justifyContent="center">
               {skillCloudData.map((obj) => (
-                <Grid key={obj.code} item xs={6}>
+                <Grid key={obj.code} item xs={6} align="center">
                   <CircularChart
                     value={obj.value}
                     text={obj.title}
                     color="#999999"
+                    icon={iconObj[obj.code]}
                   />
                 </Grid>
               ))}

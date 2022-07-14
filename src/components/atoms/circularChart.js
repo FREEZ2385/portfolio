@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import "react-circular-progressbar/dist/styles.css";
 
 function CircularChart(props) {
-  const { value, text, color } = props;
+  const { value, text, color, icon } = props;
   const [inValue, setInValue] = useState(0);
 
   const onStartFunction = () => {
@@ -33,7 +33,7 @@ function CircularChart(props) {
     onStartFunction();
   }, []);
   return (
-    <div className={`${text}`} style={{ width: 200, height: 200 }}>
+    <div className={`${text}`} style={{ width: 180, height: 180 }}>
       <CircularProgressbarWithChildren
         initialAnimation={true}
         styles={buildStyles({
@@ -44,8 +44,12 @@ function CircularChart(props) {
         })}
         value={inValue}
       >
+        <img src={icon} alt="image" width={100} height={80} />
         <div>{text}</div>
-        <div>{inValue}%</div>
+        <div style={{ display: "flex" }}>
+          <h1>{inValue}</h1>
+          <h1>%</h1>
+        </div>
       </CircularProgressbarWithChildren>
     </div>
   );
@@ -55,6 +59,7 @@ CircularChart.propTypes = {
   value: PropTypes.int,
   text: PropTypes.string,
   color: PropTypes.string,
+  icon: PropTypes.string,
   // skillTimeLine: PropTypes.any.isRequired,
 };
 
@@ -62,6 +67,7 @@ CircularChart.defaultProps = {
   title: 0,
   text: "",
   color: "",
+  icon: "",
 };
 
 export default CircularChart;

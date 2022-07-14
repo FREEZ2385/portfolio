@@ -1,14 +1,15 @@
+
 [
     {
         "code": "aws",
         "title": "AWS",
         "value": 90,
-        "icon": ""
+        "icon": "../images/skill/aws.svg"
     },
     {
-        "code": "microsoftazure",
+        "code": "azure",
         "title": "Microsoft Azure",
         "value": 90,
-        "icon": ""
+        "icon": "../images/skill/azure.svg"
     }
 ]

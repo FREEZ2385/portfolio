@@ -2,13 +2,21 @@
     {
         "code": "react",
         "title": "React",
-        "value": 90,
-        "icon": ""
+        "value": 90
     },
     {
         "code": "django",
         "title": "Django",
-        "value": 90,
-        "icon": ""
+        "value": 90
+    },
+    {
+        "code": "pandas",
+        "title": "Pandas",
+        "value": 90
+    },
+    {
+        "code": "flutter",
+        "title": "Flutter",
+        "value": 90
     }
 ]
