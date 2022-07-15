@@ -4,6 +4,9 @@ import CircularChart from "../atoms/circularChart";
 import skillFrameworkData from "../../json/skillFramework.json";
 import skillCloudData from "../../json/skillCloud.json";
 import skillLanguageData from "../../json/skillLanguage.json";
+import skillEtcData from "../../json/skillEtc.json";
+import ProgressBarArea from "../atoms/progressBarArea";
+import SkillTags from "../organisms/skillTags";
 import "./scss/skill.scss";
 // image List
 import awsIcon from "../../images/skill/aws.svg";
@@ -77,6 +80,23 @@ function Skill() {
                 </Grid>
               ))}
             </Grid>
+          </Grid>
+        </Grid>
+        <Grid container spacing={1} justifyContent="center">
+          <Grid item xs={6} style={{ padding: "0px 40px" }}>
+            <h1>Etc</h1>
+            {skillEtcData.map((obj) => (
+              <ProgressBarArea
+                key={obj.title}
+                text={obj.title}
+                value={obj.value}
+                color={obj.color}
+              />
+            ))}
+          </Grid>
+          <Grid item xs={6}>
+            <h1>Little Knowledge</h1>
+            <SkillTags />
           </Grid>
         </Grid>
       </div>

@@ -33,7 +33,7 @@ function CircularChart(props) {
     onStartFunction();
   }, []);
   return (
-    <div className={`${text}`} style={{ width: 180, height: 180 }}>
+    <div className={`${text}`} style={{ width: "80%", height: "80%" }}>
       <CircularProgressbarWithChildren
         initialAnimation={true}
         styles={buildStyles({
@@ -44,7 +44,7 @@ function CircularChart(props) {
         })}
         value={inValue}
       >
-        <img src={icon} alt="image" width={100} height={80} />
+        <img src={icon} alt="image" width="40%" height="30%" />
         <div>{text}</div>
         <div style={{ display: "flex" }}>
           <h1>{inValue}</h1>
