@@ -1,25 +1,26 @@
 import gsap from "gsap";
 import React, { useEffect, useState } from "react";
-import NavbarMenuItem from "../atoms/navbarMenuItem";
+import PropTypes from "prop-types";
 import "./scss/mainNavbar.scss";
 
-function MainNavbar() {
+function MainNavbar(props) {
+  const { sectionList } = props;
   const [isOpen, setIsOpen] = useState(false);
-
-  const handleClose = () => {
-    gsap.fromTo(
-      ".nav-bar",
-      { x: 0, duration: 0.2 },
-      { x: "19vw", duration: 1.0, ease: "elastic.out(0.8, 0.5)" }
-    );
-    setIsOpen(true);
-  };
 
   const handleOpen = () => {
     gsap.fromTo(
       ".nav-bar",
-      { x: "19vw", duration: 0.2 },
-      { x: 0, duration: 0.6 }
+      { y: 0, duration: 0.2 },
+      { y: "8vh", duration: 1.0, ease: "elastic.out(0.8, 0.5)" }
+    );
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    gsap.fromTo(
+      ".nav-bar",
+      { y: "8vh", duration: 0.2 },
+      { y: 0, duration: 0.6 }
     );
     setIsOpen(false);
   };
@@ -33,13 +34,32 @@ function MainNavbar() {
       );
   });
   return (
-    <div className="nav-bar">
+    <div
+      className="nav-bar"
+      onMouseEnter={() => {
+        if (!isOpen) {
+          handleOpen();
+        }
+      }}
+      onMouseLeave={() => {
+        if (isOpen) {
+          handleClose();
+        }
+      }}
+    >
       <div className="nav-bar-area">
-        <div className="nav-bar-title">Freez`s Laziness</div>
         <div className="nav-bar-menu">
-          <NavbarMenuItem title="Home" />
-          <NavbarMenuItem title="About Me" />
-          <NavbarMenuItem title="Project" />
+          {sectionList.map((obj) => (
+            <div
+              key={obj.title}
+              className="nav-bar-menu-item"
+              onClick={() => {
+                obj.ref.current.scrollIntoView();
+              }}
+            >
+              {obj.title}
+            </div>
+          ))}
         </div>
       </div>
       <div
@@ -57,5 +77,13 @@ function MainNavbar() {
     </div>
   );
 }
+
+MainNavbar.propTypes = {
+  sectionList: PropTypes.arrayOf(PropTypes.object),
+};
+
+MainNavbar.defaultProps = {
+  sectionList: [],
+};
 
 export default MainNavbar;
