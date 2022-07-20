@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./scss/mainNavbar.scss";
 
@@ -24,15 +24,6 @@ function MainNavbar(props) {
     );
     setIsOpen(false);
   };
-
-  useEffect(() => {
-    if (isOpen)
-      gsap.fromTo(
-        ".nav-bar-menu",
-        { y: "5vh", duration: 0, opacity: 0, ease: "power4.out" },
-        { y: 0, duration: 0.5, opacity: 1, ease: "power4.out" }
-      );
-  });
   return (
     <div
       className="nav-bar"
@@ -54,10 +45,15 @@ function MainNavbar(props) {
               key={obj.title}
               className="nav-bar-menu-item"
               onClick={() => {
-                obj.ref.current.scrollIntoView();
+                const panel = document.querySelectorAll(`#panel-${obj.id}`);
+                gsap.to(window, {
+                  scrollTo: { y: panel },
+                  duration: 1,
+                  ease: "power4.out",
+                });
               }}
             >
-              {obj.title}
+              <span className="nav-bar-item-text">{obj.title}</span>
             </div>
           ))}
         </div>

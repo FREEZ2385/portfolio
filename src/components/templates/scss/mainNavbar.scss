@@ -27,6 +27,11 @@
             align-items: center;
             justify-content: space-around;
             height: 100%;
+            font-size: 1.5em;
+            cursor: pointer;
+            .nav-bar-item-text {
+                color: #ffffff;
+            }
         }
     }
 }
