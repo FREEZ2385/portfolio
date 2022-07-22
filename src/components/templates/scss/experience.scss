@@ -1,14 +1,17 @@
 .experience {
     background-color: #000000;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     padding: 9vh 2vw;
     .experience-area {
         background-color: white;
         width: 90vw;
-        height: 80vh;
+        height: 30vh;
         border-radius: 30px;
         padding: 2vmin;
+        position: relative;
+        list-style: none;
+        margin: 2vh 0;
 
         .experience-title-subtitle,
         .experience-content {
