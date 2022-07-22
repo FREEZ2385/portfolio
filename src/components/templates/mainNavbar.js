@@ -1,11 +1,12 @@
 import gsap from "gsap";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./scss/mainNavbar.scss";
 
 function MainNavbar(props) {
   const { sectionList } = props;
   const [isOpen, setIsOpen] = useState(false);
+  const [styledSectionList, setStyledSectionList] = useState(sectionList);
 
   const handleOpen = () => {
     gsap.fromTo(
@@ -24,6 +25,29 @@ function MainNavbar(props) {
     );
     setIsOpen(false);
   };
+
+  const isNearSetting = () => {
+    const tempSectionList = sectionList.map((obj) => {
+      const sectionPosition = obj.ref.current.getBoundingClientRect();
+      const isNear =
+        sectionPosition.top < 3 &&
+        -sectionPosition.top < sectionPosition.height - 3;
+      return {
+        ...obj,
+        isNear: isNear,
+      };
+    });
+
+    setStyledSectionList(tempSectionList);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", isNearSetting);
+    return () => {
+      window.removeEventListener("scroll", isNearSetting);
+    };
+  }, [sectionList]);
+
   return (
     <div
       className="nav-bar"
@@ -40,12 +64,13 @@ function MainNavbar(props) {
     >
       <div className="nav-bar-area">
         <div className="nav-bar-menu">
-          {sectionList.map((obj) => (
+          {styledSectionList.map((obj) => (
             <div
               key={obj.title}
               className="nav-bar-menu-item"
               onClick={() => {
                 const panel = document.querySelectorAll(`#panel-${obj.id}`);
+                console.log(obj.ref.current.getBoundingClientRect());
                 gsap.to(window, {
                   scrollTo: { y: panel },
                   duration: 1,
@@ -53,7 +78,11 @@ function MainNavbar(props) {
                 });
               }}
             >
-              <span className="nav-bar-item-text">{obj.title}</span>
+              <div
+                className={obj.isNear ? "selected-text" : "non-selected-text"}
+              >
+                {obj.title}
+              </div>
             </div>
           ))}
         </div>
@@ -67,9 +96,7 @@ function MainNavbar(props) {
             handleClose();
           }
         }}
-      >
-        open
-      </div>
+      ></div>
     </div>
   );
 }

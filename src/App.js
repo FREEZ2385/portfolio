@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./App.scss";
 import AboutMe from "./components/templates/aboutMe";
 import Introduce from "./components/templates/introduce";
@@ -40,14 +40,25 @@ function App() {
     PageAnimation();
   });
 
-  ScrollTrigger.addEventListener("scrollEnd", () => console.log("scrollEnd"));
+  // ScrollTrigger.addEventListener("scrollEnd", () => console.log("scrollEnd"));
+
+  const topRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const skillRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectRef = useRef(null);
 
   const mainNavbarItemList = [
-    { title: "Top", id: "introduce" },
-    { title: "AboutMe", id: "aboutMe" },
-    { title: "Skill", id: "skill" },
-    { title: "Experience", id: "experience" },
-    { title: "Project", id: "project" },
+    { title: "Top", id: "introduce", ref: topRef, isNear: true },
+    { title: "AboutMe", id: "aboutMe", ref: aboutMeRef, isNear: false },
+    { title: "Skill", id: "skill", ref: skillRef, isNear: false },
+    {
+      title: "Experience",
+      id: "experience",
+      ref: experienceRef,
+      isNear: false,
+    },
+    { title: "Project", id: "project", ref: projectRef, isNear: false },
   ];
 
   return (
@@ -57,19 +68,19 @@ function App() {
       <ScrollIcon />
 
       <div className="area">
-        <div id="panel-introduce" className="panel">
+        <div id="panel-introduce" className="panel" ref={topRef}>
           <Introduce />
         </div>
-        <div id="panel-aboutMe" className="panel">
+        <div id="panel-aboutMe" className="panel" ref={aboutMeRef}>
           <AboutMe />
         </div>
-        <div id="panel-skill" className="panel">
+        <div id="panel-skill" className="panel" ref={skillRef}>
           <Skill />
         </div>
-        <div id="panel-experience" className="panel">
+        <div id="panel-experience" className="panel" ref={experienceRef}>
           <Experience />
         </div>
-        <div id="panel-project" className="panel">
+        <div id="panel-project" className="panel" ref={projectRef}>
           <Project />
         </div>
         <Footer />
