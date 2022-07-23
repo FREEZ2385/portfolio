@@ -37,6 +37,7 @@ function App() {
     //     onEnterBack: () => goToPanel(panel),
     //   });
     // });
+
     PageAnimation();
   });
 

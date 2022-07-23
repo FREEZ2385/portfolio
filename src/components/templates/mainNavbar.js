@@ -30,8 +30,8 @@ function MainNavbar(props) {
     const tempSectionList = sectionList.map((obj) => {
       const sectionPosition = obj.ref.current.getBoundingClientRect();
       const isNear =
-        sectionPosition.top < 3 &&
-        -sectionPosition.top < sectionPosition.height - 3;
+        sectionPosition.top < sectionPosition.height / 2 + 3 &&
+        -sectionPosition.top < sectionPosition.height / 2 - 3;
       return {
         ...obj,
         isNear: isNear,
