@@ -3,13 +3,13 @@
     {
         "code": "aws",
         "title": "AWS",
-        "value": 90,
+        "value": 40,
         "icon": "../images/skill/aws.svg"
     },
     {
         "code": "azure",
         "title": "Microsoft Azure",
-        "value": 90,
+        "value": 30,
         "icon": "../images/skill/azure.svg"
     }
 ]

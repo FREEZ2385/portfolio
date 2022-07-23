@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import CircularChart from "../atoms/circularChart";
 import skillFrameworkData from "../../json/skillFramework.json";
 import skillCloudData from "../../json/skillCloud.json";
@@ -8,6 +8,7 @@ import skillEtcData from "../../json/skillEtc.json";
 import ProgressBarArea from "../atoms/progressBarArea";
 import SkillTags from "../organisms/skillTags";
 import "./scss/skill.scss";
+
 // image List
 import awsIcon from "../../images/skill/aws.svg";
 import azureIcon from "../../images/skill/azure.svg";
@@ -32,6 +33,8 @@ const iconObj = {
 };
 
 function Skill() {
+  useEffect(() => {}, []);
+
   return (
     <section className="skill">
       <div className="skill-area">

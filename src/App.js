@@ -2,6 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import React, { useEffect, useRef } from "react";
+import AOS from "aos";
 import "./App.scss";
 import AboutMe from "./components/templates/aboutMe";
 import Introduce from "./components/templates/introduce";
@@ -37,7 +38,8 @@ function App() {
     //     onEnterBack: () => goToPanel(panel),
     //   });
     // });
-
+    AOS.init();
+    window.addEventListener("load", AOS.refresh());
     PageAnimation();
   });
 

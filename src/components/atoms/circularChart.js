@@ -3,6 +3,8 @@ import {
   CircularProgressbarWithChildren,
   buildStyles,
 } from "react-circular-progressbar";
+
+import "aos/dist/aos.css";
 import PropTypes from "prop-types";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -10,30 +12,23 @@ function CircularChart(props) {
   const { value, text, color, icon } = props;
   const [inValue, setInValue] = useState(0);
 
-  const onStartFunction = () => {
-    setInValue(value);
-  };
-
   useEffect(() => {
-    // skillTimeLine.from(`.${text}`, {
-    //   width: 0,
-    //   height: 0,
-    //   autoAlpha: 0,
-    // });
-    // skillTimeLine.to(`.${text}`, {
-    //   width: 200,
-    //   height: 200,
-    //   ease: "elastic.out(1.3, 1)",
-    //   autoAlpha: 1,
-    //   duration: 0.5,
-    //   onComplete: () => {
-    //     onStartFunction();
-    //   },
-    // });
-    onStartFunction();
+    document.addEventListener("aos:in:circular-chart", () => {
+      setInValue(value);
+    });
+
+    document.addEventListener("aos:out:circular-chart", () => {
+      setInValue(0);
+    });
   }, []);
   return (
-    <div className={`${text}`} style={{ width: "80%", height: "80%" }}>
+    <div
+      className={`${text}`}
+      data-aos="zoom-in"
+      data-aos-id="circular-chart"
+      data-aos-easing="ease-in-out-back"
+      style={{ width: "80%", height: "80%" }}
+    >
       <CircularProgressbarWithChildren
         initialAnimation={true}
         styles={buildStyles({
@@ -41,6 +36,8 @@ function CircularChart(props) {
           pathColor: `${color}`,
           textColor: "#f88",
           trailColor: "#d6d6d6",
+
+          pathTransitionDuration: 1.5,
         })}
         value={inValue}
       >

@@ -1,18 +1,15 @@
 import gsap from "gsap";
-import React, { useEffect } from "react";
+import React from "react";
 import ExperienceContent from "../organisms/experienceContent";
 import experienceData from "../../json/experience.json";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import AOS from "aos";
+
 import "aos/dist/aos.css";
 
 import "./scss/experience.scss";
 
 function Experience() {
   gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <section className="experience">
