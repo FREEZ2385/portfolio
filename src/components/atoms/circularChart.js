@@ -26,6 +26,7 @@ function CircularChart(props) {
       className={`${text}`}
       data-aos="zoom-in"
       data-aos-id="circular-chart"
+      data-aos-once="true"
       data-aos-easing="ease-in-out-back"
       style={{ width: "80%", height: "80%" }}
     >

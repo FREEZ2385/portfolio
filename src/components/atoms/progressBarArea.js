@@ -2,21 +2,30 @@ import React, { useEffect, useState } from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 import PropTypes from "prop-types";
 import "./scss/progressBarArea.scss";
+import "aos/dist/aos.css";
 
 function ProgressBarArea(props) {
   const { value, text, color } = props;
   const [inValue, setInValue] = useState(0);
 
-  const onStartFunction = () => {
-    setInValue(value);
-  };
-
   useEffect(() => {
-    onStartFunction();
+    document.addEventListener("aos:in:progress-bar", () => {
+      setInValue(value);
+    });
+
+    document.addEventListener("aos:out:progress-bar", () => {
+      setInValue(0);
+    });
   }, []);
 
   return (
-    <div className={`progress-bar-area progressbar_${text}`}>
+    <div
+      data-aos="zoom-in"
+      data-aos-id="progress-bar"
+      data-aos-once="true"
+      data-aos-easing="ease-in-out-back"
+      className={`progress-bar-area progressbar_${text}`}
+    >
       <div className="progress-bar-label">
         <span>{text}</span>
       </div>

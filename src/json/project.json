@@ -7,5 +7,14 @@
         "gitUrl": "https://github.com/FREEZ2385/ffxiv-crafting-total-material",
         "framework": ["React", "Redux", "AWS"],
         "content": "よくプレイする「Final Fantasy XIV」って言うゲームの中でアイテム制作の便利のため直接開発したウェブアプリケーションです。「FFXIV」のデーターベースをAPIから取得してアイテム制作に必要な材料をまとめて並ぶようにしました。"
+    },
+    {
+        "id": "ffxiv2",
+        "projectName": "FFXIV CRAFTING TOTAL MATERIAL2",
+        "imagePath": "",
+        "url": "https://ffxivctm.com",
+        "gitUrl": "https://github.com/FREEZ2385/ffxiv-crafting-total-material",
+        "framework": ["React", "Redux", "AWS"],
+        "content": "よくプレイする「Final Fantasy XIV」って言うゲームの中でアイテム制作の便利のため直接開発したウェブアプリケーションです。「FFXIV」のデーターベースをAPIから取得してアイテム制作に必要な材料をまとめて並ぶようにしました。"
     }
 ]

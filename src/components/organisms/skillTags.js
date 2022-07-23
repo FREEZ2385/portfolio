@@ -5,9 +5,14 @@ import "aos/dist/aos.css";
 
 function SkillTags() {
   return (
-    <div className="skill-tags">
+    <div
+      data-aos="zoom-in"
+      data-aos-once="true"
+      data-aos-easing="ease-in-out-back"
+      className="skill-tags"
+    >
       {SkillTagsData.map((tagData) => (
-        <div data-aos="zoom-in" key={tagData} className="skill-tag">
+        <div key={tagData} className="skill-tag">
           {tagData}
         </div>
       ))}
