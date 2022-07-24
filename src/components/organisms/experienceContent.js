@@ -1,28 +1,32 @@
 import React from "react";
-import "./scss/aboutMeArea.scss";
+import "./scss/experienceContent.scss";
 import PropTypes from "prop-types";
 
-function ExperenceContent(props) {
+function ExperienceContent(props) {
   const { experienceContentData } = props;
 
   return (
-    <div>
+    <div className="experience-content-area">
       <div className="experience-title-subtitle">
-        <h2>{experienceContentData.companyName}</h2>
-        <h2>
-          {experienceContentData.date.start} ~ {experienceContentData.date.end}
-        </h2>
+        <div className="experience-title">
+          {experienceContentData.companyName}
+        </div>
+        <div className="experience-subtitle">
+          ({experienceContentData.date.start} ~ {experienceContentData.date.end}
+          )
+        </div>
       </div>
+      <hr />
       <div className="experience-content">
         {experienceContentData.content.map((contentText) => (
-          <h4 key={contentText}>{contentText}</h4>
+          <div key={contentText}>・{contentText}</div>
         ))}
       </div>
     </div>
   );
 }
 
-ExperenceContent.propTypes = {
+ExperienceContent.propTypes = {
   experienceContentData: PropTypes.shape({
     id: PropTypes.string,
     companyName: PropTypes.string,
@@ -31,4 +35,4 @@ ExperenceContent.propTypes = {
   }),
 };
 
-export default ExperenceContent;
+export default ExperienceContent;
