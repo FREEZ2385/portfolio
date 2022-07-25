@@ -6,9 +6,20 @@ function ScrollIcon() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
+      var body = document.body,
+        html = document.documentElement;
+
+      var height = Math.max(
+        body.scrollHeight,
+        body.offsetHeight,
+        html.clientHeight,
+        html.scrollHeight,
+        html.offsetHeight
+      );
+
       console.log(window.scrollX, window.scrollY);
-      console.log(window.outerHeight);
-      if (window.scrollY < window.outerHeight + 300) {
+      console.log(height);
+      if (window.scrollY < height - 1200) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
