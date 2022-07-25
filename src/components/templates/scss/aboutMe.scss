@@ -4,22 +4,33 @@
     padding: 9vh 9vw;
 
     .about-me-content-area {
-        width: 80vw;
-        height: 80vh;
+        width: 70vw;
+        height: 70vh;
         background-color: white;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.5);
+        padding: 5vh 5vw;
     }
-    .about-me-left-contents {
-        width: 49vw;
-        height: 20vh;
-        position: relative;
-        float: left;
-        background-color: #ffffff;
+    .about-me-title {
+        font-size: 2em;
+        text-align: left;
+        margin-bottom: 2vh;
     }
-    .about-me-right-contents {
-        width: 48vw;
-        height: 20vh;
-        position: relative;
-        float: right;
-        background-color: #ffffff;
+
+    .about-me-picture-area {
+        display: flex;
+        justify-content: space-between;
+        .about-me-simple-introduce {
+            width: 40vw;
+            padding: 0 2vw;
+            text-align: left;
+            .introduce-name {
+                font-size: 2em;
+                margin-bottom: 2vh;
+            }
+        }
+    }
+    .about-me-introduce-area {
+        font-size: 1em;
+        text-align: left;
     }
 }

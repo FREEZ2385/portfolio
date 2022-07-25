@@ -86,7 +86,7 @@ function Skill() {
           </Grid>
         </Grid>
         <Grid container spacing={1} justifyContent="center">
-          <Grid item xs={6} style={{ padding: "0px 40px" }}>
+          <Grid item xs={7} style={{ padding: "0px 40px", height: "20vh" }}>
             <h1>Etc</h1>
             {skillEtcData.map((obj) => (
               <ProgressBarArea
@@ -97,7 +97,7 @@ function Skill() {
               />
             ))}
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={5}>
             <h1>Little Knowledge</h1>
             <SkillTags />
           </Grid>

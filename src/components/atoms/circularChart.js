@@ -44,10 +44,7 @@ function CircularChart(props) {
       >
         <img src={icon} alt="image" width="40%" height="30%" />
         <div>{text}</div>
-        <div style={{ display: "flex" }}>
-          <h1>{inValue}</h1>
-          <h1>%</h1>
-        </div>
+        <div style={{ display: "flex", fontSize: "1em" }}>{inValue}%</div>
       </CircularProgressbarWithChildren>
     </div>
   );

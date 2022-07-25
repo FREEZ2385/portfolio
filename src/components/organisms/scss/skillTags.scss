@@ -1,18 +1,17 @@
 .skill-tags {
     background-color: beige;
     border-radius: 20px;
-    padding: 15px;
+    padding: 0.5vmax;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     align-content: flex-start;
     margin-top: 20px;
     .skill-tag {
-        height: 20px;
-        font-size: 18px;
+        font-size: 1.05em;
         background-color: indianred;
         color: white;
-        padding: 10px;
+        padding: 0.5vmax;
         border-radius: 10px;
         margin: 10px 5px;
     }
