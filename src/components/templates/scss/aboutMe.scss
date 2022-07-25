@@ -19,18 +19,27 @@
     .about-me-picture-area {
         display: flex;
         justify-content: space-between;
+        .about-me-picture {
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+        }
         .about-me-simple-introduce {
             width: 40vw;
             padding: 0 2vw;
             text-align: left;
             .introduce-name {
+                font-size: 4em;
+                margin-bottom: 2vh;
+            }
+            .introduce-nickname {
                 font-size: 2em;
                 margin-bottom: 2vh;
             }
         }
     }
     .about-me-introduce-area {
-        font-size: 1em;
+        font-size: 1.3em;
         text-align: left;
     }
 }

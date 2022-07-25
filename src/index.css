@@ -7,6 +7,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media only screen and (max-width: 1280px) {
+  body { 
+  font-size: 12px; 
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body { 
+  font-size: 10px; 
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  body { 
+  font-size: 8px; 
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body { 
+  font-size: 6px; 
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
