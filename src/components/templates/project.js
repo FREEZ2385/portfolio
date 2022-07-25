@@ -3,24 +3,31 @@ import React from "react";
 import projectData from "../../json/project.json";
 import ProjectContent from "../organisms/projectContent";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+import { Paper, IconButton } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import "./scss/project.scss";
 
 function Project() {
   return (
     <section className="project">
-      <h1>Project</h1>
       <Carousel
-        fullHeightHover={false} // We want the nav buttons wrapper to only be as big as the button element is
-        NavButton={({ onClick, className, style, next, prev }) => {
-          // Other logic
-
+        fullHeightHover={false}
+        NavButton={({ onClick, next, prev }) => {
           return (
-            <Button onClick={onClick} className={className} style={style}>
-              {next && "Next"}
-              {prev && "Previous"}
-            </Button>
+            <IconButton size="small" onClick={onClick}>
+              {prev && (
+                <ArrowBackIosNewIcon
+                  style={{ color: "#666666", width: "3vmax", height: "3vmax" }}
+                />
+              )}
+              {next && (
+                <ArrowForwardIosIcon
+                  style={{ color: "#666666", width: "3vmax", height: "3vmax" }}
+                />
+              )}
+            </IconButton>
           );
         }}
       >

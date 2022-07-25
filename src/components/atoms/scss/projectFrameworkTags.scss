@@ -1,0 +1,24 @@
+.project-framework-tags {
+    background-color: beige;
+    border-radius: 20px;
+    text-align: start;
+    padding: 1vmax;
+    .project-framework-tags-title {
+        font-size: 1.2em;
+    }
+
+    .project-framework-area {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        .framework-tag {
+            font-size: 1.2em;
+            background-color: indianred;
+            color: white;
+            padding: 0.5vmax;
+            border-radius: 10px;
+            margin: 0.5vh 0.3vw;
+        }
+    }
+}
