@@ -32,8 +32,9 @@ function ProgressBarArea(props) {
       <ProgressBar
         completed={inValue}
         bgColor={color}
-        width="35vw"
+        width="32vw"
         height="2vh"
+        labelSize="0.8em"
         padding="0.3vmax"
       />
     </div>

@@ -38,7 +38,7 @@ function Skill() {
   return (
     <section className="skill">
       <div className="skill-area">
-        <h1>Skill</h1>
+        <div className="skill-title">Skill</div>
         <Grid container spacing={1} justifyContent="center">
           <Grid item xs={4}>
             <h1>Language</h1>
@@ -86,7 +86,7 @@ function Skill() {
           </Grid>
         </Grid>
         <Grid container spacing={1} justifyContent="center">
-          <Grid item xs={7} style={{ padding: "0px 40px", height: "20vh" }}>
+          <Grid item xs={7} style={{ padding: "0 5vw" }}>
             <h1>Etc</h1>
             {skillEtcData.map((obj) => (
               <ProgressBarArea
@@ -97,7 +97,7 @@ function Skill() {
               />
             ))}
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={5} style={{ padding: "0 5vw" }}>
             <h1>Little Knowledge</h1>
             <SkillTags />
           </Grid>

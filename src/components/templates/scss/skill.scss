@@ -1,13 +1,16 @@
 .skill {
-    background-color: rgb(93, 77, 77);
+    background-color: #0f4c75;
     height: 82vh;
-    padding: 9vh 2vw;
+    padding: 9vh 4vw;
     .skill-area {
         background-color: white;
         width: 90vw;
         height: 80vh;
         border-radius: 30px;
         padding: 2vmin;
+        .skill-title {
+            font-size: 2.5em;
+        }
     }
     circle {
         fill: none;

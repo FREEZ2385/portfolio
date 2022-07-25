@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import "./scss/aboutMe.scss";
 import aboutMePicure from "../../images/aboutMe/introduce.jpeg";
 import { Grid } from "@mui/material";
+import aboutmeData from "../../json/aboutMe.json";
 
 function AboutMe() {
   return (
@@ -25,31 +26,20 @@ function AboutMe() {
             <div className="introduce-name">About Me</div>
             <div className="introduce-nickname">Lee Freezを紹介します。</div>
             <div className="introduce-subtitle">
-              <Grid container>
-                <Grid item xs={4}>
-                  名前
-                </Grid>
-                <Grid item xs={8}>
-                  : Lee Sangcheol(イーサンチョル)
-                </Grid>
-                <Grid item xs={4}>
-                  国籍
-                </Grid>
-                <Grid item xs={8}>
-                  : 韓国
-                </Grid>
-                <Grid item xs={4}>
-                  日本語能力(JLPT)
-                </Grid>
-                <Grid item xs={8}>
-                  : ネイティブ(N2)
-                </Grid>
-                <Grid item xs={4}>
-                  趣味
-                </Grid>
-                <Grid item xs={8}>
-                  : サイクリング、運動
-                </Grid>
+              <Grid container spacing={{ xs: 0.5, md: 1 }}>
+                {aboutmeData.map((obj) => (
+                  <>
+                    <Grid item xs={3} className="introduce-subtitle-title">
+                      {obj.title}
+                    </Grid>
+                    <Grid item xs={1} className="introduce-subtitle-title">
+                      :
+                    </Grid>
+                    <Grid item xs={8} className="introduce-subtitle-content">
+                      {obj.content}
+                    </Grid>
+                  </>
+                ))}
               </Grid>
             </div>
           </div>

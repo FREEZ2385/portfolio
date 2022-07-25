@@ -1,5 +1,5 @@
 .about-me {
-    background-color: #666666;
+    background-color: #0f4c75;
     overflow: hidden;
     padding: 9vh 9vw;
 
@@ -19,6 +19,7 @@
     .about-me-picture-area {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 3vh;
         .about-me-picture {
             width: 40vw;
             display: flex;
@@ -28,6 +29,7 @@
             width: 40vw;
             padding: 0 2vw;
             text-align: left;
+
             .introduce-name {
                 font-size: 4em;
                 margin-bottom: 2vh;
@@ -35,6 +37,14 @@
             .introduce-nickname {
                 font-size: 2em;
                 margin-bottom: 2vh;
+            }
+            .introduce-subtitle-title {
+                font-size: 1.1em;
+                font-weight: 700;
+            }
+            .introduce-subtitle-content {
+                font-size: 1em;
+                font-weight: 400;
             }
         }
     }

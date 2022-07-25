@@ -1,27 +1,22 @@
 [
     {
         "code": "name",
-        "title": "Name",
-        "content": "Lee Sangcheol"
-    },
-    {
-        "code": "birth",
-        "title": "Birth",
-        "content": "1993-01-25"
+        "title": "名前",
+        "content": "Lee Sangcheol(イーサンチョル)"
     },
     {
         "code": "region",
-        "title": "Region",
-        "content": "Republic of Korea"
+        "title": "国籍",
+        "content": "韓国"
     },
     {
-        "code": "test",
-        "title": "Test",
-        "content": "More"
+        "code": "japanese",
+        "title": "日本語能力(JLPT)",
+        "content": "ネイティブ(N2)"
     },
     {
-        "code": "tesst",
-        "title": "Tesst",
-        "content": "Mores"
+        "code": "hobby",
+        "title": "趣味",
+        "content": "サイクリング、運動"
     }
 ]
