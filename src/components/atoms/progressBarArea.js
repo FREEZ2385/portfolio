@@ -3,6 +3,7 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import PropTypes from "prop-types";
 import "./scss/progressBarArea.scss";
 import "aos/dist/aos.css";
+import { Grid } from "@mui/material";
 
 function ProgressBarArea(props) {
   const { value, text, color } = props;
@@ -26,17 +27,22 @@ function ProgressBarArea(props) {
       data-aos-easing="ease-in-out-back"
       className={`progress-bar-area progressbar_${text}`}
     >
-      <div className="progress-bar-label">
-        <span>{text}</span>
-      </div>
-      <ProgressBar
-        completed={inValue}
-        bgColor={color}
-        width="32vw"
-        height="2vh"
-        labelSize="0.8em"
-        padding="0.3vmax"
-      />
+      <Grid container>
+        <Grid item xs={4}>
+          <div className="progress-bar-label">
+            <span>{text}</span>
+          </div>
+        </Grid>
+        <Grid item xs={8}>
+          <ProgressBar
+            completed={inValue}
+            bgColor={color}
+            height="2vh"
+            labelSize="0.8em"
+            padding="0.3vmax"
+          />
+        </Grid>
+      </Grid>
     </div>
   );
 }
