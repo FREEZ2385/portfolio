@@ -1,12 +1,12 @@
 .about-me {
     background-color: #666666;
     overflow: hidden;
+    padding: 9vh 9vw;
 
-    #about-me-centerline {
-        position: relative;
-        left: 49vw;
-        background-color: #000000;
-        width: 2vw;
+    .about-me-content-area {
+        width: 80vw;
+        height: 80vh;
+        background-color: white;
     }
     .about-me-left-contents {
         width: 49vw;

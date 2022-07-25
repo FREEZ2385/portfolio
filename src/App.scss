@@ -5,8 +5,8 @@
 
 .area {
   // overflow: hidden;
-  height: 100vh;
   overflow-x: visible;
+  width: 100%;
 }
 
 .App-logo {
@@ -16,6 +16,7 @@
 
 .panel {
   display: block;
+  width: 100%;
 }
 
 h1 {

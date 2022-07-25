@@ -17,22 +17,24 @@ function ProjectContent(props) {
     <div className="project-content-area">
       <div className="project-title-subtitle">
         <div className="project-title">{projectContentData.projectName}</div>
-        <Button
-          className="link-button"
-          onClick={() => {
-            openInNewTab(projectContentData.url);
-          }}
-        >
-          リンクへ
-        </Button>
-        <Button
-          className="link-button"
-          onClick={() => {
-            openInNewTab(projectContentData.gitUrl);
-          }}
-        >
-          GitHub
-        </Button>
+        <div className="button-area">
+          <Button
+            className="link-button"
+            onClick={() => {
+              openInNewTab(projectContentData.url);
+            }}
+          >
+            リンクへ
+          </Button>
+          <Button
+            className="link-button"
+            onClick={() => {
+              openInNewTab(projectContentData.gitUrl);
+            }}
+          >
+            GitHub
+          </Button>
+        </div>
       </div>
       {projectContentData.isImage ? (
         <div className="image-area">

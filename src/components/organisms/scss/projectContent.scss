@@ -2,15 +2,19 @@
     .project-title-subtitle {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 1vmax;
         .project-title {
             font-size: 3em;
         }
-        .link-button {
-            background-color: bisque;
-            font-size: 1.2em;
-            margin: 0 1vw;
-            border-radius: 2vmax;
+        .button-area {
+            display: flex;
+            .link-button {
+                background-color: bisque;
+                font-size: 1.2em;
+                margin: 0 1vw;
+                border-radius: 2vmax;
+            }
         }
     }
     .image-area {
