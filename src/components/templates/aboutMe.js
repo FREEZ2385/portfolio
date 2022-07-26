@@ -16,34 +16,50 @@ function AboutMe() {
         className="about-me-content-area"
       >
         <div className="about-me-picture-area">
-          <div className="about-me-picture">
-            <img
-              src={aboutMePicure}
-              style={{ maxHeight: "40vh", borderRadius: "3vmax" }}
-            />
-          </div>
-          <div className="about-me-simple-introduce">
-            <div className="introduce-name">About Me</div>
-            <div className="introduce-nickname">Lee Freezを紹介します。</div>
-            <div className="introduce-subtitle">
-              <Grid container spacing={{ xs: 0.5, md: 1 }}>
-                {aboutmeData.map((obj) => (
-                  <>
-                    <Grid item xs={3} className="introduce-subtitle-title">
-                      {obj.title}
-                    </Grid>
-                    <Grid item xs={1} className="introduce-subtitle-title">
-                      :
-                    </Grid>
-                    <Grid item xs={8} className="introduce-subtitle-content">
-                      {obj.content}
-                    </Grid>
-                  </>
-                ))}
-              </Grid>
-            </div>
-          </div>
+          <Grid container spacing={{ xs: 0.5, md: 1 }}>
+            <Grid item xs={6}>
+              <div className="about-me-picture">
+                <img
+                  src={aboutMePicure}
+                  style={{
+                    maxWidth: "30vh",
+                    borderRadius: "3vmax",
+                  }}
+                />
+              </div>
+            </Grid>
+            <Grid item xs={6}>
+              <div className="about-me-simple-introduce">
+                <div className="introduce-name">About Me</div>
+                <div className="introduce-nickname">
+                  Lee Freezを紹介します。
+                </div>
+                <div className="introduce-subtitle">
+                  <Grid container spacing={{ xs: 0.5, md: 1 }}>
+                    {aboutmeData.map((obj) => (
+                      <>
+                        <Grid item xs={4} className="introduce-subtitle-title">
+                          {obj.title}
+                        </Grid>
+                        <Grid item xs={1} className="introduce-subtitle-title">
+                          :
+                        </Grid>
+                        <Grid
+                          item
+                          xs={7}
+                          className="introduce-subtitle-content"
+                        >
+                          {obj.content}
+                        </Grid>
+                      </>
+                    ))}
+                  </Grid>
+                </div>
+              </div>
+            </Grid>
+          </Grid>
         </div>
+
         <div className="about-me-introduce-area">
           <div>
             こんにちは。Lee Sangcheol(イー・サンチョル)と申します。

@@ -1,8 +1,10 @@
 import React from "react";
 import "./scss/projectContent.scss";
 import PropTypes from "prop-types";
-import { Button } from "@mui/material";
+import { IconButton } from "@mui/material";
 import ProjectFrameworkTags from "../atoms/projectFrameworkTags";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import PublicIcon from "@mui/icons-material/Public";
 // image path import
 import ffxivScreenShot from "../../images/project/ffxiv_screenshot.png";
 
@@ -18,22 +20,22 @@ function ProjectContent(props) {
       <div className="project-title-subtitle">
         <div className="project-title">{projectContentData.projectName}</div>
         <div className="button-area">
-          <Button
+          <IconButton
             className="link-button"
             onClick={() => {
               openInNewTab(projectContentData.url);
             }}
           >
-            リンクへ
-          </Button>
-          <Button
+            <PublicIcon className="link-icon" />
+          </IconButton>
+          <IconButton
             className="link-button"
             onClick={() => {
               openInNewTab(projectContentData.gitUrl);
             }}
           >
-            GitHub
-          </Button>
+            <GitHubIcon className="link-icon" />
+          </IconButton>
         </div>
       </div>
       {projectContentData.isImage ? (

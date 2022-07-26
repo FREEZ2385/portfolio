@@ -10,10 +10,12 @@
         .button-area {
             display: flex;
             .link-button {
-                background-color: bisque;
-                font-size: 1.2em;
                 margin: 0 1vw;
                 border-radius: 2vmax;
+                .link-icon {
+                    width: 3vmax;
+                    height: 3vmax;
+                }
             }
         }
     }
