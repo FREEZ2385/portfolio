@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Murecho';
+    font-weight: 300;
+    src: url('./Murecho/Murecho-Light.eot') format('woff2'),
+      url('./Murecho/Murecho-Light.eot') format('woff'),
+      url('./Murecho/Murecho-Light.eot') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Murecho';
+    font-weight: 400;
+    src: url('./Murecho/Murecho-Regular.eot') format('woff2'),
+      url('./Murecho/Murecho-Regular.eot') format('woff'),
+      url('./Murecho/Murecho-Regular.eot') format('truetype');
+  }
+  @font-face {
+    font-family: 'Murecho';
+    font-weight: 500;
+    src: url('./Murecho/Murecho-Medium.eot') format('woff2'),
+      url('./Murecho/Murecho-Medium.eot') format('woff'),
+      url('./Murecho/Murecho-Medium.eot') format('truetype');
+  }
+  @font-face {
+    font-family: 'Murecho';
+    font-weight: 700;
+    src: url('./Murecho/Murecho-Bold.eot') format('woff2'),
+      url('./Murecho/Murecho-Bold.eot') format('woff'),
+      url('./Murecho/Murecho-Bold.eot') format('truetype');
+  }
+   
