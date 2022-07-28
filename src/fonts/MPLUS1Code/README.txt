@@ -1,26 +1,24 @@
-Murecho Variable Font
-=====================
+M PLUS 1 Code Variable Font
+===========================
 
-This download contains Murecho as both a variable font and static fonts.
+This download contains M PLUS 1 Code as both a variable font and static fonts.
 
-Murecho is a variable font with this axis:
+M PLUS 1 Code is a variable font with this axis:
   wght
 
 This means all the styles are contained in a single file:
-  Murecho-VariableFont_wght.ttf
+  MPLUS1Code-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for Murecho:
-  static/Murecho-Thin.ttf
-  static/Murecho-ExtraLight.ttf
-  static/Murecho-Light.ttf
-  static/Murecho-Regular.ttf
-  static/Murecho-Medium.ttf
-  static/Murecho-SemiBold.ttf
-  static/Murecho-Bold.ttf
-  static/Murecho-ExtraBold.ttf
-  static/Murecho-Black.ttf
+in those cases you can use the static font files for M PLUS 1 Code:
+  static/MPLUS1Code-Thin.ttf
+  static/MPLUS1Code-ExtraLight.ttf
+  static/MPLUS1Code-Light.ttf
+  static/MPLUS1Code-Regular.ttf
+  static/MPLUS1Code-Medium.ttf
+  static/MPLUS1Code-SemiBold.ttf
+  static/MPLUS1Code-Bold.ttf
 
 Get started
 -----------
