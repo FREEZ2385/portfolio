@@ -88,3 +88,21 @@
 .invisible {
     display: none;
 }
+
+@media only screen and (max-width: 1024px) {
+    .scroll-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .scroll-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .scroll-icon {
+        display: none;
+    }
+}
