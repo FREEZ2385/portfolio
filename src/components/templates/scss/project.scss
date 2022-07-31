@@ -1,11 +1,32 @@
 .project {
     background-color: #0f4c75;
-    padding: 9vh 2vw;
+    padding: 9vh 9vw;
+
+    .project-carousel {
+        width: 70vw;
+        min-height: 70vh;
+        border-left: solid #f38181 2vmax;
+        background-color: white;
+        box-shadow: 1vmax 1vmax 0.2vmax 0.2vmax rgba(0, 0, 0, 0.3);
+        padding: 5vh 5vw;
+
+        @media only screen and (max-width: 760px) {
+            .carousel-navbutton {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            .carousel-navbutton {
+                display: none;
+            }
+        }
+    }
     .project-paper {
         background-color: white;
-        height: 80vh;
-        border-radius: 30px;
-        padding: 4vmax;
+
+        min-height: 70vh;
+        box-shadow: 0vmax 0vmax 0vmax 0vmax rgba(0, 0, 0, 0.3);
 
         .experience-title-subtitle,
         .experience-content {

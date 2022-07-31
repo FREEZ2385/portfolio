@@ -1,10 +1,11 @@
 .project-framework-tags {
-    background-color: beige;
-    border-radius: 20px;
     text-align: start;
     padding: 1vmax;
+    display: flex;
+    align-items: center;
+
     .project-framework-tags-title {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .project-framework-area {
@@ -13,11 +14,13 @@
         flex-wrap: wrap;
         align-content: flex-start;
         .framework-tag {
-            font-size: 1.2em;
-            background-color: indianred;
-            color: white;
-            padding: 0.5vmax;
-            border-radius: 10px;
+            font-size: 0.8em;
+            text-align: center;
+            background-color: #e8d3ff;
+            color: #3282b8;
+            padding: 0.3vmax;
+            border-radius: 1vmax;
+            min-width: 3vw;
             margin: 0.5vh 0.3vw;
         }
     }

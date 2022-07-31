@@ -5,8 +5,8 @@
 
     .about-me-content-area {
         width: 70vw;
-        height: 70vh;
-        border-left: solid #3282b8 2vmax;
+        min-height: 70vh;
+        border-left: solid #95e1d3 2vmax;
         background-color: white;
         box-shadow: 1vmax 1vmax 0.2vmax 0.2vmax rgba(0, 0, 0, 0.3);
         padding: 5vh 5vw;

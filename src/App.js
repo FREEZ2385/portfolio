@@ -56,13 +56,13 @@ function App() {
     { title: "Top", id: "introduce", ref: topRef, isNear: true },
     { title: "AboutMe", id: "aboutMe", ref: aboutMeRef, isNear: false },
     { title: "Skill", id: "skill", ref: skillRef, isNear: false },
+    { title: "Project", id: "project", ref: projectRef, isNear: false },
     {
       title: "Experience",
       id: "experience",
       ref: experienceRef,
       isNear: false,
     },
-    { title: "Project", id: "project", ref: projectRef, isNear: false },
   ];
 
   return (
@@ -81,11 +81,11 @@ function App() {
         <div id="panel-skill" className="panel" ref={skillRef}>
           <Skill />
         </div>
-        <div id="panel-experience" className="panel" ref={experienceRef}>
-          <Experience />
-        </div>
         <div id="panel-project" className="panel" ref={projectRef}>
           <Project />
+        </div>
+        <div id="panel-experience" className="panel" ref={experienceRef}>
+          <Experience />
         </div>
         <Footer />
       </div>

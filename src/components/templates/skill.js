@@ -8,6 +8,7 @@ import skillEtcData from "../../json/skillEtc.json";
 import ProgressBarArea from "../atoms/progressBarArea";
 import SkillTags from "../organisms/skillTags";
 import "./scss/skill.scss";
+import "aos/dist/aos.css";
 
 // image List
 import awsIcon from "../../images/skill/aws.svg";
@@ -37,7 +38,7 @@ function Skill() {
 
   return (
     <section className="skill">
-      <div className="skill-area">
+      <div className="skill-area" data-aos="fade-up" data-aos-duration="1000">
         <div className="skill-title">Skill</div>
         <Grid container spacing={1} justifyContent="center">
           <Grid item xs={4}>

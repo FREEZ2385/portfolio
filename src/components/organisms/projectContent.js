@@ -17,6 +17,16 @@ function ProjectContent(props) {
 
   return (
     <div className="project-content-area">
+      {projectContentData.isImage ? (
+        <div className="image-area">
+          <img
+            src={ffxivScreenShot}
+            style={{ maxWidth: "70vw", maxHeight: "40vh" }}
+          />
+        </div>
+      ) : (
+        <div className="empty-image"></div>
+      )}
       <div className="project-title-subtitle">
         <div className="project-title">{projectContentData.projectName}</div>
         <div className="button-area">
@@ -38,17 +48,6 @@ function ProjectContent(props) {
           </IconButton>
         </div>
       </div>
-      {projectContentData.isImage ? (
-        <div className="image-area">
-          <img
-            src={ffxivScreenShot}
-            style={{ maxWidth: "70vw", maxHeight: "40vh" }}
-          />
-        </div>
-      ) : (
-        <div className="empty-image"></div>
-      )}
-
       <ProjectFrameworkTags frameworkData={projectContentData.framework} />
       <div className="project-content">{projectContentData.content}</div>
     </div>
