@@ -12,7 +12,7 @@ function MainNavbar(props) {
     gsap.fromTo(
       ".nav-bar",
       { y: 0, duration: 0.2 },
-      { y: "8vh", duration: 1.0, ease: "elastic.out(0.8, 0.5)" }
+      { y: "7vh", duration: 1.0, ease: "elastic.out(0.8, 0.5)" }
     );
     setIsOpen(true);
   };
@@ -20,7 +20,7 @@ function MainNavbar(props) {
   const handleClose = () => {
     gsap.fromTo(
       ".nav-bar",
-      { y: "8vh", duration: 0.2 },
+      { y: "7vh", duration: 0.2 },
       { y: 0, duration: 0.6 }
     );
     setIsOpen(false);
@@ -63,6 +63,7 @@ function MainNavbar(props) {
       }}
     >
       <div className="nav-bar-area">
+        <div className="nav-bar-title">Freez Laziness</div>
         <div className="nav-bar-menu">
           {styledSectionList.map((obj) => (
             <div
