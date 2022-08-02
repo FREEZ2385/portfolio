@@ -1,0 +1,35 @@
+.project-content-area {
+    .project-title-subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1vmax;
+        .project-title {
+            font-size: 2em;
+        }
+        .button-area {
+            display: flex;
+            .link-button {
+                margin: 0 1vw;
+                border-radius: 2vmax;
+                .link-icon {
+                    width: 3vmax;
+                    height: 3vmax;
+                }
+            }
+        }
+    }
+    .image-area {
+        display: flex;
+        align-items: flex-start;
+        padding: 1vmax;
+    }
+    .empty-image {
+        height: 10vh;
+    }
+    .project-content {
+        text-align: left;
+        padding: 1vmax;
+        font-size: 1em;
+    }
+}

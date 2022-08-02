@@ -1,6 +1,5 @@
-.introduce { 
-    background-color: black;
-    width: 100vw;
+.introduce {
+    background-color: #1b262c;
     height: 100vh;
     color: white;
     position: relative;
@@ -8,9 +7,26 @@
     align-items: center;
     justify-content: right;
     display: flex;
-    .introduce-contents{
+    .introduce-contents {
         padding: 5%;
         text-align: right;
-        font-size: 60px;
+        .introduce-title {
+            font-family: "LexendDeca";
+            font-size: 6em;
+        }
+        .introduce-subtitle {
+            display: flex;
+
+            font-size: 5em;
+            .introduce-subtitle-category {
+                font-family: "LexendDeca";
+                color: #00ff00;
+                width: 40vw;
+            }
+            .introduce-subtitle-developer {
+                font-family: "LexendDeca";
+                margin-left: 1.5vw;
+            }
+        }
     }
 }

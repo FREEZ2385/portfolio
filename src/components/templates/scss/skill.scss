@@ -1,0 +1,21 @@
+.skill {
+    background-color: #0f4c75;
+    overflow: hidden;
+    padding: 9vh 9vw;
+
+    .skill-area {
+        background-color: white;
+        width: 70vw;
+        min-height: 70vh;
+        border-left: solid #fce38a 2vmax;
+        box-shadow: 1vmax 1vmax 0.2vmax 0.2vmax rgba(0, 0, 0, 0.3);
+        padding: 5vh 5vw;
+        .skill-title {
+            font-size: 2.5em;
+        }
+    }
+    circle {
+        fill: none;
+        stroke-width: 100;
+    }
+}

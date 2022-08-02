@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'MPLUS1Code';
+    font-weight: 300;
+    src: url('./MPLUS1Code/MPLUS1Code-Light.ttf') format('woff2'),
+      url('./MPLUS1Code/MPLUS1Code-Light.ttf') format('woff'),
+      url('./MPLUS1Code/MPLUS1Code-Light.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'MPLUS1Code';
+    font-weight: 400;
+    src: url('./MPLUS1Code/MPLUS1Code-Regular.ttf') format('woff2'),
+      url('./MPLUS1Code/MPLUS1Code-Regular.ttf') format('woff'),
+      url('./MPLUS1Code/MPLUS1Code-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'MPLUS1Code';
+    font-weight: 500;
+    src: url('./MPLUS1Code/MPLUS1Code-Medium.ttf') format('woff2'),
+      url('./MPLUS1Code/MPLUS1Code-Medium.ttf') format('woff'),
+      url('./MPLUS1Code/MPLUS1Code-Medium.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'MPLUS1Code';
+    font-weight: 700;
+    src: url('./MPLUS1Code/MPLUS1Code-Bold.ttf') format('woff2'),
+      url('./MPLUS1Code/MPLUS1Code-Bold.ttf') format('woff'),
+      url('./MPLUS1Code/MPLUS1Code-Bold.ttf') format('truetype');
+  }
+  
+
+  @font-face {
+    font-family: 'LexendDeca';
+    font-weight: 700;
+    src: url('./LexendDeca/LexendDeca-Bold.ttf') format('woff2'),
+      url('./LexendDeca/LexendDeca-Bold.ttf') format('woff'),
+      url('./LexendDeca/LexendDeca-Bold.ttf') format('truetype');
+  }

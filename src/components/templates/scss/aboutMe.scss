@@ -1,16 +1,57 @@
-.about-me { 
-    background-color: #888888;
-    width: 100vw;
-    height: 100vh;
-    color: white;
-    position: relative;
+.about-me {
+    background-color: #0f4c75;
     overflow: hidden;
-    align-items: center;
-    justify-content: right;
-    display: flex;
-    .about-me-contents{
-        padding: 5%;
-        text-align: right;
-        font-size: 60px;
+    padding: 9vh 9vw;
+
+    .about-me-content-area {
+        width: 70vw;
+        min-height: 70vh;
+        border-left: solid #95e1d3 2vmax;
+        background-color: white;
+        box-shadow: 1vmax 1vmax 0.2vmax 0.2vmax rgba(0, 0, 0, 0.3);
+        padding: 5vh 5vw;
+    }
+    .about-me-title {
+        font-size: 2em;
+        text-align: left;
+        margin-bottom: 2vh;
+    }
+
+    .about-me-picture-area {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3vh;
+        .about-me-picture {
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+        }
+        .about-me-simple-introduce {
+            width: 40vw;
+            padding: 0 2vw;
+            text-align: left;
+
+            .introduce-name {
+                font-size: 4em;
+                margin-bottom: 2vh;
+            }
+            .introduce-nickname {
+                font-size: 2em;
+                margin-bottom: 2vh;
+            }
+            .introduce-subtitle-title {
+                font-size: 1.1em;
+                font-weight: 700;
+            }
+            .introduce-subtitle-content {
+                font-size: 1em;
+                font-weight: 400;
+            }
+        }
+    }
+    .about-me-introduce-area {
+        font-size: 1em;
+        font-weight: 400;
+        text-align: left;
     }
 }

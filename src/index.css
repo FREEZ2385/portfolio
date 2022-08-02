@@ -1,10 +1,45 @@
 body {
   margin: 0;
+  font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: 'MPLUS1Code', sans-serif;
+}
+
+@media only screen and (max-width: 1600px) {
+  body { 
+  font-size: 16px; 
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  body { 
+  font-size: 12px; 
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body { 
+  font-size: 10px; 
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  body { 
+  font-size: 6px; 
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body { 
+  font-size: 6px; 
+  }
 }
 
 code {

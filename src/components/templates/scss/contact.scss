@@ -1,0 +1,30 @@
+.contact {
+    background-color: #555555;
+    width: 40vw;
+    height: 9vh;
+    top: 78%;
+    right: -37vw;
+    position: fixed;
+    z-index: 2000;
+    display: flex;
+    border-top-left-radius: 2vmax;
+    border-bottom-left-radius: 2vmax;
+    .contact-open-button {
+        background-color: #777777;
+        width: 10%;
+        border-top-left-radius: 2vmax;
+        border-bottom-left-radius: 2vmax;
+        justify-content: center;
+        padding: 1.5vmax 0px;
+    }
+    .contact-icon {
+        width: 3.5vw;
+        height: 3.5vh;
+    }
+    .contact-area {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 0 1.5vmax;
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "code": "name",
+        "title": "名前",
+        "content": "Lee Sangcheol(イーサンチョル)"
+    },
+    {
+        "code": "region",
+        "title": "国籍",
+        "content": "韓国"
+    },
+    {
+        "code": "japanese",
+        "title": "日本語能力(JLPT)",
+        "content": "ネイティブ(N2)"
+    },
+    {
+        "code": "hobby",
+        "title": "趣味",
+        "content": "サイクリング、運動"
+    }
+]

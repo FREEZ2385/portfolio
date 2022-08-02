@@ -1,0 +1,13 @@
+.progress-bar-area {
+    display: flex;
+    width: 35vw;
+    height: 2vh;
+    margin: 3vh 0;
+    .progress-bar-label {
+        font-size: 1em;
+        text-align: start;
+        width: 25vw;
+        font-weight: bold;
+        margin-right: 2vw;
+    }
+}

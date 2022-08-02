@@ -1,0 +1,25 @@
+.experience {
+    background-color: #1b262c;
+    align-items: center;
+    min-height: 100vh;
+    padding: 9vh 1.5vw;
+    overflow-x: hidden;
+    .experience-timeline {
+        position: absolute;
+        left: 5.7vmax;
+        height: 100vh;
+        width: 0.5vw;
+        background-color: #bbe1fa;
+    }
+    .experience-area {
+        display: flex;
+        align-items: center;
+        .experience-circle {
+            width: 5vmax;
+            height: 5vmax;
+            background-color: #bbe1fa;
+            border-radius: 5vmax;
+            margin: 2vh 2vw;
+        }
+    }
+}

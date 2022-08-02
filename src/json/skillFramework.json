@@ -1,0 +1,22 @@
+[
+    {
+        "code": "react",
+        "title": "React",
+        "value": 90
+    },
+    {
+        "code": "django",
+        "title": "Django",
+        "value": 85
+    },
+    {
+        "code": "pandas",
+        "title": "Pandas",
+        "value": 80
+    },
+    {
+        "code": "flutter",
+        "title": "Flutter",
+        "value": 70
+    }
+]
