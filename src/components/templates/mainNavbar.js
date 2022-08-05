@@ -1,11 +1,31 @@
 import gsap from "gsap";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./scss/mainNavbar.scss";
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useMediaQuery } from "react-responsive";
 // import { isDesktop, isMobile } from "../../mobileCheck";
+
+const useOutsideClick = (callback) => {
+  const ref = React.useRef();
+
+  React.useEffect(() => {
+    const handleClick = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        callback();
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [ref]);
+
+  return ref;
+};
 
 function MainNavbar(props) {
   const { sectionList } = props;
@@ -18,7 +38,9 @@ function MainNavbar(props) {
     query: "(min-width: 761px)",
   });
 
-  const mobileMenu = useRef(null);
+  const mobileMenu = useOutsideClick(() => {
+    handleMobileClose();
+  });
   const handleOpen = () => {
     gsap.fromTo(
       ".nav-bar",
@@ -167,7 +189,12 @@ function MainNavbar(props) {
               <MenuIcon />
             </IconButton>
           </div>
-          <div className="nav-bar-menu">
+          <div
+            className="nav-bar-menu"
+            onBlur={() => {
+              handleMobileClose();
+            }}
+          >
             {styledSectionList.map((obj) => (
               <div
                 key={obj.title}
