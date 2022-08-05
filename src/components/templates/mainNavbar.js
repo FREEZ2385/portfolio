@@ -2,12 +2,19 @@ import gsap from "gsap";
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./scss/mainNavbar.scss";
+import { useMediaQuery } from "react-responsive";
+// import { isDesktop, isMobile } from "../../mobileCheck";
 
 function MainNavbar(props) {
   const { sectionList } = props;
   const [isOpen, setIsOpen] = useState(false);
+  const [ismobileOpen, setIsMobileOpen] = useState(false);
   const [styledSectionList, setStyledSectionList] = useState(sectionList);
 
+  const isMobile = useMediaQuery({ query: "(max-width: 761px)" });
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 761px)",
+  });
   const handleOpen = () => {
     gsap.fromTo(
       ".nav-bar",
@@ -24,6 +31,44 @@ function MainNavbar(props) {
       { y: 0, duration: 0.6 }
     );
     setIsOpen(false);
+  };
+
+  const handleMobileOpen = () => {
+    gsap.fromTo(
+      ".nav-bar-menu-item",
+      {
+        height: "0vh",
+        opacity: 0,
+        zIndex: 0,
+      },
+      {
+        opacity: 1,
+        height: "12vh",
+        zIndex: 0,
+        duration: 0.4,
+      }
+    );
+
+    setIsMobileOpen(true);
+  };
+
+  const handleMobileClose = () => {
+    gsap.fromTo(
+      ".nav-bar-menu-item",
+      {
+        opacity: 1,
+        height: "12vh",
+        zIndex: 0,
+      },
+      {
+        opacity: 0,
+        height: "0vh",
+        zIndex: 0,
+        duration: 0.4,
+      }
+    );
+
+    setIsMobileOpen(false);
   };
 
   const isNearSetting = () => {
@@ -49,56 +94,105 @@ function MainNavbar(props) {
   }, [sectionList]);
 
   return (
-    <div
-      className="nav-bar"
-      onMouseEnter={() => {
-        if (!isOpen) {
-          handleOpen();
-        }
-      }}
-      onMouseLeave={() => {
-        if (isOpen) {
-          handleClose();
-        }
-      }}
-    >
-      <div className="nav-bar-area">
-        <div className="nav-bar-title">Freez Laziness</div>
-        <div className="nav-bar-menu">
-          {styledSectionList.map((obj) => (
-            <div
-              key={obj.title}
-              className="nav-bar-menu-item"
-              onClick={() => {
-                const panel = document.querySelectorAll(`#panel-${obj.id}`);
-                console.log(obj.ref.current.getBoundingClientRect());
-                gsap.to(window, {
-                  scrollTo: { y: panel },
-                  duration: 1,
-                  ease: "power4.out",
-                });
-              }}
-            >
-              <div
-                className={obj.isNear ? "selected-text" : "non-selected-text"}
-              >
-                {obj.title}
-              </div>
+    <>
+      {isDesktop && (
+        <div
+          className="nav-bar"
+          onMouseEnter={() => {
+            if (!isOpen) {
+              handleOpen();
+            }
+          }}
+          onMouseLeave={() => {
+            if (isOpen) {
+              handleClose();
+            }
+          }}
+        >
+          <div className="nav-bar-area">
+            <div className="nav-bar-title">Freez`s Laziness</div>
+            <div className="nav-bar-menu">
+              {styledSectionList.map((obj) => (
+                <div
+                  key={obj.title}
+                  className="nav-bar-menu-item"
+                  onClick={() => {
+                    const panel = document.querySelectorAll(`#panel-${obj.id}`);
+                    console.log(obj.ref.current.getBoundingClientRect());
+                    gsap.to(window, {
+                      scrollTo: { y: panel },
+                      duration: 1,
+                      ease: "power4.out",
+                    });
+                  }}
+                >
+                  <div
+                    className={
+                      obj.isNear ? "selected-text" : "non-selected-text"
+                    }
+                  >
+                    {obj.title}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <div
+            className="nav-bar-open-button"
+            onClick={() => {
+              if (isOpen) {
+                handleOpen();
+              } else {
+                handleClose();
+              }
+            }}
+          ></div>
         </div>
-      </div>
-      <div
-        className="nav-bar-open-button"
-        onClick={() => {
-          if (isOpen) {
-            handleOpen();
-          } else {
-            handleClose();
-          }
-        }}
-      ></div>
-    </div>
+      )}
+
+      {isMobile && (
+        <div
+          className="mobile-nav-bar"
+          onMouseEnter={() => {
+            if (!ismobileOpen) {
+              handleMobileOpen();
+            }
+          }}
+          onMouseLeave={() => {
+            if (ismobileOpen) {
+              handleMobileClose();
+            }
+          }}
+        >
+          <div className="nav-bar-area">
+            <div className="nav-bar-title">Freez`s Laziness</div>
+          </div>
+          <div className="nav-bar-menu">
+            {styledSectionList.map((obj) => (
+              <div
+                key={obj.title}
+                className="nav-bar-menu-item"
+                onClick={() => {
+                  const panel = document.querySelectorAll(`#panel-${obj.id}`);
+                  console.log(obj.ref.current.getBoundingClientRect());
+                  gsap.to(window, {
+                    scrollTo: { y: panel },
+                    duration: 1,
+                    ease: "power4.out",
+                  });
+                }}
+              >
+                <div
+                  className={obj.isNear ? "selected-text" : "non-selected-text"}
+                >
+                  {obj.title}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
