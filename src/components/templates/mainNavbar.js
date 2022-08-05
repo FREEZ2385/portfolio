@@ -1,7 +1,9 @@
 import gsap from "gsap";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import "./scss/mainNavbar.scss";
+import { IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useMediaQuery } from "react-responsive";
 // import { isDesktop, isMobile } from "../../mobileCheck";
 
@@ -15,6 +17,8 @@ function MainNavbar(props) {
   const isDesktop = useMediaQuery({
     query: "(min-width: 761px)",
   });
+
+  const mobileMenu = useRef(null);
   const handleOpen = () => {
     gsap.fromTo(
       ".nav-bar",
@@ -39,12 +43,10 @@ function MainNavbar(props) {
       {
         height: "0vh",
         opacity: 0,
-        zIndex: 0,
       },
       {
         opacity: 1,
         height: "12vh",
-        zIndex: 0,
         duration: 0.4,
       }
     );
@@ -58,12 +60,10 @@ function MainNavbar(props) {
       {
         opacity: 1,
         height: "12vh",
-        zIndex: 0,
       },
       {
         opacity: 0,
         height: "0vh",
-        zIndex: 0,
         duration: 0.4,
       }
     );
@@ -151,21 +151,21 @@ function MainNavbar(props) {
       )}
 
       {isMobile && (
-        <div
-          className="mobile-nav-bar"
-          onMouseEnter={() => {
-            if (!ismobileOpen) {
-              handleMobileOpen();
-            }
-          }}
-          onMouseLeave={() => {
-            if (ismobileOpen) {
-              handleMobileClose();
-            }
-          }}
-        >
+        <div className="mobile-nav-bar" ref={mobileMenu}>
           <div className="nav-bar-area">
             <div className="nav-bar-title">Freez`s Laziness</div>
+            <IconButton
+              className="menu-icon"
+              onClick={() => {
+                if (ismobileOpen) {
+                  handleMobileClose();
+                } else {
+                  handleMobileOpen();
+                }
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
           </div>
           <div className="nav-bar-menu">
             {styledSectionList.map((obj) => (
