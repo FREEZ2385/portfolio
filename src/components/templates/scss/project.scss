@@ -33,12 +33,23 @@
     }
     .project-paper {
         background-color: white;
-        min-height: 70vh;
+        min-height: 800px;
         box-shadow: 0vmax 0vmax 0vmax 0vmax rgba(0, 0, 0, 0.3);
 
         .experience-title-subtitle,
         .experience-content {
             text-align: left;
+        }
+    }
+    @media only screen and (max-width: 760px) {
+        .project-paper {
+            min-height: 70vh;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .project-paper {
+            min-height: 70vh;
         }
     }
 }
