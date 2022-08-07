@@ -46,25 +46,49 @@ function AboutMe() {
                   Lee Freezを紹介します。
                 </div>
                 <div className="introduce-subtitle">
-                  <Grid container spacing={{ xs: 0.5, md: 1 }}>
-                    {aboutmeData.map((obj) => (
-                      <>
-                        <Grid item xs={4} className="introduce-subtitle-title">
-                          {obj.title}
-                        </Grid>
-                        <Grid item xs={1} className="introduce-subtitle-title">
-                          :
-                        </Grid>
-                        <Grid
-                          item
-                          xs={7}
-                          className="introduce-subtitle-content"
-                        >
-                          {obj.content}
-                        </Grid>
-                      </>
-                    ))}
-                  </Grid>
+                  {isDesktop ? (
+                    <Grid container spacing={{ xs: 0.5, md: 1 }}>
+                      {aboutmeData.map((obj) => (
+                        <>
+                          <Grid
+                            item
+                            xs={4}
+                            className="introduce-subtitle-title"
+                          >
+                            {obj.title}
+                          </Grid>
+                          <Grid
+                            item
+                            xs={1}
+                            className="introduce-subtitle-title"
+                          >
+                            :
+                          </Grid>
+                          <Grid
+                            item
+                            xs={7}
+                            className="introduce-subtitle-content"
+                          >
+                            {obj.content}
+                          </Grid>
+                        </>
+                      ))}
+                    </Grid>
+                  ) : (
+                    <div>
+                      {aboutmeData.map((obj) => (
+                        <>
+                          <div className="introduce-subtitle-title-mobile">
+                            {obj.title}
+                          </div>
+                          <hr style={{ borderTop: "1px solid #EEEEEE" }} />
+                          <div className="introduce-subtitle-content-mobile">
+                            {obj.content}
+                          </div>
+                        </>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </Grid>
