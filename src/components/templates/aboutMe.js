@@ -2,7 +2,6 @@
 import React from "react";
 import "aos/dist/aos.css";
 import "./scss/aboutMe.scss";
-import aboutMePicure from "../../images/aboutMe/introduce.jpeg";
 import { Grid } from "@mui/material";
 import aboutmeData from "../../json/aboutMe.json";
 import { useMediaQuery } from "react-responsive";
@@ -29,7 +28,7 @@ function AboutMe() {
             <Grid item xs={isDesktop ? 6 : 12} alignItems="center">
               <div className="about-me-picture">
                 <img
-                  src={aboutMePicure}
+                  src="https://s3.ap-northeast-1.amazonaws.com/freez2385.portfolio/img/introduce.jpeg"
                   style={{
                     maxWidth: "30vh",
                     borderRadius: "3vmax",
