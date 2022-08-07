@@ -43,6 +43,7 @@ function Skill() {
     <section className="skill">
       <div className="skill-area" data-aos="fade-up" data-aos-duration="1000">
         <div className="skill-title">Skill</div>
+
         <Grid container spacing={1} justifyContent="center">
           <Grid item xs={isDesktop ? 4 : 12} className="skill-grid">
             <div className="skill-category-title"> Language </div>
