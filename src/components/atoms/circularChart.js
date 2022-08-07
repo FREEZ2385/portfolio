@@ -7,10 +7,14 @@ import {
 import "aos/dist/aos.css";
 import PropTypes from "prop-types";
 import "react-circular-progressbar/dist/styles.css";
+import { useMediaQuery } from "react-responsive";
 
 function CircularChart(props) {
   const { value, text, color, icon } = props;
   const [inValue, setInValue] = useState(0);
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 761px)",
+  });
 
   useEffect(() => {
     document.addEventListener("aos:in:circular-chart", () => {
@@ -43,7 +47,15 @@ function CircularChart(props) {
         value={inValue}
       >
         <img src={icon} alt="image" width="40%" height="30%" />
-        <div>{text}</div>
+        <div
+          style={{
+            display: "flex",
+            fontSize: isDesktop ? "1.2em" : "0.7em",
+            color: "#666666",
+          }}
+        >
+          {text}
+        </div>
         <div style={{ display: "flex", fontSize: "1em" }}>{inValue}%</div>
       </CircularProgressbarWithChildren>
     </div>

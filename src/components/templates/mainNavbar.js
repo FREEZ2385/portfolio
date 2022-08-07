@@ -5,14 +5,13 @@ import "./scss/mainNavbar.scss";
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useMediaQuery } from "react-responsive";
-// import { isDesktop, isMobile } from "../../mobileCheck";
 
-const useOutsideClick = (callback) => {
+const useOutsideClick = (callback, state) => {
   const ref = React.useRef();
 
   React.useEffect(() => {
     const handleClick = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
+      if (ref.current && !ref.current.contains(event.target) && state) {
         callback();
       }
     };
@@ -40,7 +39,7 @@ function MainNavbar(props) {
 
   const mobileMenu = useOutsideClick(() => {
     handleMobileClose();
-  });
+  }, ismobileOpen);
   const handleOpen = () => {
     gsap.fromTo(
       ".nav-bar",
@@ -68,7 +67,7 @@ function MainNavbar(props) {
       },
       {
         opacity: 1,
-        height: "12vh",
+        height: 60,
         duration: 0.4,
       }
     );
@@ -81,7 +80,7 @@ function MainNavbar(props) {
       ".nav-bar-menu-item",
       {
         opacity: 1,
-        height: "12vh",
+        height: 60,
       },
       {
         opacity: 0,
@@ -192,7 +191,9 @@ function MainNavbar(props) {
           <div
             className="nav-bar-menu"
             onBlur={() => {
-              handleMobileClose();
+              if (ismobileOpen) {
+                handleMobileClose();
+              }
             }}
           >
             {styledSectionList.map((obj) => (

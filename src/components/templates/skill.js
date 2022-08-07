@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import CircularChart from "../atoms/circularChart";
 import skillFrameworkData from "../../json/skillFramework.json";
 import skillCloudData from "../../json/skillCloud.json";
@@ -7,6 +7,7 @@ import skillLanguageData from "../../json/skillLanguage.json";
 import skillEtcData from "../../json/skillEtc.json";
 import ProgressBarArea from "../atoms/progressBarArea";
 import SkillTags from "../organisms/skillTags";
+import { useMediaQuery } from "react-responsive";
 import "./scss/skill.scss";
 import "aos/dist/aos.css";
 
@@ -34,18 +35,20 @@ const iconObj = {
 };
 
 function Skill() {
-  useEffect(() => {}, []);
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 761px)",
+  });
 
   return (
     <section className="skill">
       <div className="skill-area" data-aos="fade-up" data-aos-duration="1000">
         <div className="skill-title">Skill</div>
         <Grid container spacing={1} justifyContent="center">
-          <Grid item xs={4}>
+          <Grid item xs={isDesktop ? 4 : 12}>
             <h1>Language</h1>
             <Grid container spacing={1} justifyContent="center">
               {skillLanguageData.map((obj) => (
-                <Grid key={obj.code} item xs={6} align="center">
+                <Grid key={obj.code} item xs={isDesktop ? 6 : 3} align="center">
                   <CircularChart
                     value={obj.value}
                     text={obj.title}
@@ -55,11 +58,11 @@ function Skill() {
               ))}
             </Grid>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={isDesktop ? 4 : 12}>
             <h1>Framework</h1>
             <Grid container spacing={1} justifyContent="center">
               {skillFrameworkData.map((obj) => (
-                <Grid key={obj.code} item xs={6} align="center">
+                <Grid key={obj.code} item xs={isDesktop ? 6 : 3} align="center">
                   <CircularChart
                     value={obj.value}
                     text={obj.title}
@@ -70,11 +73,11 @@ function Skill() {
               ))}
             </Grid>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={isDesktop ? 4 : 12}>
             <h1>Cloud</h1>
             <Grid container spacing={1} justifyContent="center">
               {skillCloudData.map((obj) => (
-                <Grid key={obj.code} item xs={6} align="center">
+                <Grid key={obj.code} item xs={isDesktop ? 6 : 3} align="center">
                   <CircularChart
                     value={obj.value}
                     text={obj.title}

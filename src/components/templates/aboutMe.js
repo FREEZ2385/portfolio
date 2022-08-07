@@ -5,8 +5,13 @@ import "./scss/aboutMe.scss";
 import aboutMePicure from "../../images/aboutMe/introduce.jpeg";
 import { Grid } from "@mui/material";
 import aboutmeData from "../../json/aboutMe.json";
+import { useMediaQuery } from "react-responsive";
 
 function AboutMe() {
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 761px)",
+  });
+
   return (
     <section className="about-me">
       <div
@@ -16,8 +21,13 @@ function AboutMe() {
         className="about-me-content-area"
       >
         <div className="about-me-picture-area">
-          <Grid container spacing={{ xs: 0.5, md: 1 }}>
-            <Grid item xs={6}>
+          <Grid
+            container
+            spacing={{ xs: 0.5, md: 1 }}
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Grid item xs={isDesktop ? 6 : 12} alignItems="center">
               <div className="about-me-picture">
                 <img
                   src={aboutMePicure}
@@ -28,7 +38,7 @@ function AboutMe() {
                 />
               </div>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={isDesktop ? 6 : 12}>
               <div className="about-me-simple-introduce">
                 <div className="introduce-name">About Me</div>
                 <div className="introduce-nickname">

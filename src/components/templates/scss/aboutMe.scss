@@ -22,12 +22,12 @@
         justify-content: space-between;
         margin-bottom: 3vh;
         .about-me-picture {
-            width: 40vw;
+            width: 100%;
             display: flex;
             justify-content: center;
         }
         .about-me-simple-introduce {
-            width: 40vw;
+            width: 100%;
             padding: 0 2vw;
             text-align: left;
 
@@ -52,6 +52,7 @@
     .about-me-introduce-area {
         font-size: 1em;
         font-weight: 400;
+        margin-top: 5%;
         text-align: left;
     }
 }
