@@ -2,7 +2,7 @@
     background-color: #0f4c75;
     padding: 9vh 9vw;
 
-    .project-carousel {
+    .project-area {
         width: 70vw;
         min-height: 70vh;
         border-left: solid #f38181 2vmax;
@@ -10,6 +10,16 @@
         box-shadow: 1vmax 1vmax 0.2vmax 0.2vmax rgba(0, 0, 0, 0.3);
         padding: 5vh 5vw;
 
+        .project-carousel {
+            min-height: 70vh;
+        }
+        .project-title {
+            font-family: "LexendDeca";
+            font-weight: 700;
+            font-size: 2.7em;
+            text-align: left;
+            margin-bottom: 2vh;
+        }
         @media only screen and (max-width: 760px) {
             .carousel-navbutton {
                 display: none;
@@ -24,13 +34,23 @@
     }
     .project-paper {
         background-color: white;
-
-        min-height: 70vh;
+        min-height: 800px;
         box-shadow: 0vmax 0vmax 0vmax 0vmax rgba(0, 0, 0, 0.3);
 
         .experience-title-subtitle,
         .experience-content {
             text-align: left;
+        }
+    }
+    @media only screen and (max-width: 760px) {
+        .project-paper {
+            min-height: 70vh;
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        .project-paper {
+            min-height: 70vh;
         }
     }
 }

@@ -56,7 +56,10 @@ function ContactCopy() {
       ariaLabel="SpeedDial openIcon example"
       sx={{ position: "fixed", bottom: "3vh", right: "2vw" }}
       icon={
-        <SpeedDialIcon icon={<LocalPhoneIcon />} openIcon={<PersonAddIcon />} />
+        <SpeedDialIcon
+          icon={<LocalPhoneIcon style={{ color: "#FFFFFF" }} />}
+          openIcon={<PersonAddIcon style={{ color: "#FFFFFF" }} />}
+        />
       }
     >
       {actions.map((action) => (

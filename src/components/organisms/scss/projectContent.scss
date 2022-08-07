@@ -1,11 +1,13 @@
 .project-content-area {
+    overflow-y: auto;
     .project-title-subtitle {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1vmax;
-        .project-title {
-            font-size: 2em;
+        .project-content-title {
+            font-family: "LexendDeca";
+            font-size: 1.8em;
         }
         .button-area {
             display: flex;
@@ -21,7 +23,8 @@
     }
     .image-area {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         padding: 1vmax;
     }
     .empty-image {
@@ -30,6 +33,6 @@
     .project-content {
         text-align: left;
         padding: 1vmax;
-        font-size: 1em;
+        font-size: 1.3em;
     }
 }

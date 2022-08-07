@@ -28,6 +28,13 @@
       url('./MPLUS1Code/MPLUS1Code-Bold.ttf') format('truetype');
   }
   
+  @font-face {
+    font-family: 'LexendDeca';
+    font-weight: 400;
+    src: url('./LexendDeca/LexendDeca-Regular.ttf') format('woff2'),
+      url('./LexendDeca/LexendDeca-Regular.ttf') format('woff'),
+      url('./LexendDeca/LexendDeca-Regular.ttf') format('truetype');
+  }
 
   @font-face {
     font-family: 'LexendDeca';

@@ -28,7 +28,9 @@ function ProjectContent(props) {
         <div className="empty-image"></div>
       )}
       <div className="project-title-subtitle">
-        <div className="project-title">{projectContentData.projectName}</div>
+        <div className="project-content-title">
+          {projectContentData.projectName}
+        </div>
         <div className="button-area">
           <IconButton
             className="link-button"

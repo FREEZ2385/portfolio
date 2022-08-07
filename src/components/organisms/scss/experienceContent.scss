@@ -5,14 +5,13 @@
     border-radius: 3vmin;
 
     margin: 2vh 0;
-    padding: 2vh 2vw;
+    padding: 2vmax;
     .experience-title-subtitle,
     .experience-content {
         text-align: left;
     }
 
     .experience-title-subtitle {
-        display: flex;
         align-items: flex-end;
         .experience-title {
             font-size: 2em;
@@ -20,12 +19,15 @@
         }
         .experience-subtitle {
             margin-left: 0.5vw;
-            font-size: 1em;
+            font-size: 1.4em;
         }
+    }
+    hr {
+        margin: 20px 0;
     }
 
     .experience-content {
-        font-size: 1.2em;
+        font-size: 1.3em;
         width: 100%;
     }
 }

@@ -10,6 +10,7 @@ body {
 
 * {
   font-family: 'MPLUS1Code', sans-serif;
+  color: #003b49;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -20,7 +21,7 @@ body {
 
 @media only screen and (max-width: 1280px) {
   body { 
-  font-size: 12px; 
+  font-size: 14px; 
   }
 }
 
@@ -32,7 +33,7 @@ body {
 
 @media only screen and (max-width: 760px) {
   body { 
-  font-size: 6px; 
+  font-size: 10px; 
   }
 }
 
