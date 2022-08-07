@@ -11,7 +11,20 @@
         box-shadow: 1vmax 1vmax 0.2vmax 0.2vmax rgba(0, 0, 0, 0.3);
         padding: 5vh 5vw;
         .skill-title {
-            font-size: 2.5em;
+            font-family: "LexendDeca";
+            font-size: 3.5em;
+        }
+        .skill-grid {
+            margin: 20px 0;
+        }
+        .skill-category-title {
+            font-family: "LexendDeca";
+            font-size: 2.7em;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        hr {
+            margin: 20px 0;
         }
     }
     circle {

@@ -185,7 +185,7 @@ function MainNavbar(props) {
                 }
               }}
             >
-              <MenuIcon />
+              <MenuIcon style={{ color: "white" }} />
             </IconButton>
           </div>
           <div

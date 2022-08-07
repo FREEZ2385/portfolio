@@ -4,25 +4,25 @@
         "code": "git",
         "title": "Git",
         "value": 90,
-        "color": "#000000"
+        "color": "#1C3879"
     },
     {
         "code": "html",
         "title": "HTML/CSS",
         "value": 95,
-        "color": "#333333"
+        "color": "#1C3879"
     },
     {
         "code": "docker",
         "title": "Docker",
         "value": 70,
-        "color": "#111111"
+        "color": "#1C3879"
     },
     {
         "code": "postgre",
         "title": "PostgreSQL",
         "value": 60,
-        "color": "#222222"
+        "color": "#1C3879"
     }
     
 

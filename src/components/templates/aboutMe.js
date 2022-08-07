@@ -17,7 +17,6 @@ function AboutMe() {
       <div
         data-aos="fade-up"
         data-aos-duration="1000"
-        data-aos-offset="200"
         className="about-me-content-area"
       >
         <div className="about-me-picture-area">
@@ -40,7 +39,9 @@ function AboutMe() {
             </Grid>
             <Grid item xs={isDesktop ? 6 : 12}>
               <div className="about-me-simple-introduce">
-                <div className="introduce-name">About Me</div>
+                <div className="introduce-name">
+                  About Me <hr />
+                </div>
                 <div className="introduce-nickname">
                   Lee Freezを紹介します。
                 </div>
