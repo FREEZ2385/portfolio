@@ -10,6 +10,12 @@
         box-shadow: 1vmax 1vmax 0.2vmax 0.2vmax rgba(0, 0, 0, 0.3);
         padding: 5vh 5vw;
 
+        .project-title {
+            font-family: "LexendDeca";
+            font-size: 2.7em;
+            text-align: left;
+            margin-bottom: 2vh;
+        }
         @media only screen and (max-width: 760px) {
             .carousel-navbutton {
                 display: none;

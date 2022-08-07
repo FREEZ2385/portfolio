@@ -8,6 +8,7 @@ function ProjectFrameworkTags(props) {
   return (
     <div className="project-framework-tags">
       <div className="project-framework-tags-title">使用したフレームワーク</div>
+      <hr />
       <div className="project-framework-area">
         {frameworkData.map((tagData) => (
           <div key={tagData} className="framework-tag">

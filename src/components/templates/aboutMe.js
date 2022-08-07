@@ -39,7 +39,7 @@ function AboutMe() {
             </Grid>
             <Grid item xs={isDesktop ? 6 : 12}>
               <div className="about-me-simple-introduce">
-                <div className="introduce-name">
+                <div className="about-me-title">
                   About Me <hr />
                 </div>
                 <div className="introduce-nickname">

@@ -14,10 +14,15 @@ import "./scss/project.scss";
 function Project() {
   return (
     <section className="project">
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div
+        className="project-carousel"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div className="project-title">Project</div>
+        <hr />
         <Carousel
           fullHeightHover={false}
-          className="project-carousel"
           NavButton={({ onClick, next, prev }) => {
             return (
               <IconButton
